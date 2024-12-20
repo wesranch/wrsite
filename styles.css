@@ -1,1 +1,29 @@
-/* css styles */
+/* Custom Styles for Quarto Journal Theme */
+
+/* Change the header background color from orange to off-white */
+div#header {
+  background-color: #FAF9F6 !important; /* Soft off-white color */
+}
+
+/* Change the title text color (optional, for better contrast) */
+div#header h1 {
+  color: #333;  /* Dark text for the title */
+}
+
+/* Optional: Change the color of the navigation bar */
+div.navbar {
+  background-color: #FAF9F6 !important;  /* Same off-white color for the navbar */
+}
+
+div.navbar a {
+  color: #333;  /* Dark text for navbar links */
+}
+
+div.navbar a:hover {
+  color: #555;  /* Slightly lighter color on hover */
+}
+
+/* Optional: Adjust the footer background color as well */
+footer {
+  background-color: #FAF9F6 !important;  /* Same off-white color for footer */
+}

@@ -5,5 +5,124 @@
     "title": "Lab exercises",
     "section": "",
     "text": "Lab one instructions\n\n\nLANDSAT, EarthExplorer\n\n\n\nQGIS\n\n\n\nData exploration, true color, display imagery\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab three instructions\n\n\nchange-detection, classification, k-means-clustering\n\n\n\nQGIS\n\n\n\nimage classification\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab two instructions\n\n\nimagery, enhance, visualization\n\n\n\nQGIS\n\n\n\nimage enhancement\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "I am a second-year masters student at the University of Oregon working at the intersection of climate change, forest ecology, and spatial data science. I’m a part of the Terrestrial Ecosystems and Ecological Landscapes Lab (TEEL), and am working under the direction of Dr. Melissa Lucash.\nMy background is in hydrology and forest ecology, and I have experience using tools like ArcGIS, Google Earth Engine, Python, and R to answer questions about how ecosystems are changing. For example, my masters thesis is focused on mapping and modeling above-ground carbon density in interior Alaska using Landsat imagery, random forests, and a forest simulation model: LANDIS-II.\nA brief overview of what you will find on this site: my code page provides a glimpse of how I apply my GIS and programming skills to meet research objectives. My teaching page showcases labs I have developed which teach students how to apply key concepts in remote sensing. Lastly, some maps and posters I have made can be found on the portfolio page.\n\n\nM.S. in Geography University of Oregon | Eugene, OR (In progress)\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography University of Oregon | Eugene, OR (In progress)\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code Examples",
+    "section": "",
+    "text": "Constrast stretching\n\n\nLANDSAT, NDWI\n\n\n\nR\n\n\n\nEnhancement\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nGraphing raster distribution\n\n\nLANDSAT, Exploratory\n\n\n\nR\n\n\n\nAnalysis\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nRaster manipulation using terra\n\n\nLANDSAT, SIEVE\n\n\n\nR\n\n\n\nBand math and pixel sieving\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "maps, pubs, posters, etc.",
+    "section": "",
+    "text": "maps!\n\n\ncartography\n\n\n\nArcGIS\n\n\nR\n\n\n\nhere are some maps I have made\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npubs!\n\n\nscientific writing\n\n\n\nremote sensing\n\n\nglaciology\n\n\nthermal limits\n\n\nmellitology\n\n\n\nonly a co-author at the moment, but working on a manuscript!\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Department of Geography, University of Oregon\nTerrestrial Ecosystems Ecology and Landscapes Lab\nEmail: wesr@uoregon.edu | Linkedin: linked.com/wesleyrancher\n\n\n\nBiogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience.\n\n\n\n\n\n\nM.S. in Geography (in progress)\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley\n\n\n\n\n\n\nGIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish\n\n\n\n\n\n\n\nSeptember 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation\n\n\n\n\n\n\n\nSeptember 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2024) Developed lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data\n\n\n\n\n\n\nRippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022\n\n\n\n\n\n\nWeiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”\n\n\n\n\n\n\nRancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  },
+  {
+    "objectID": "cv.html#summary",
+    "href": "cv.html#summary",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Biogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography (in progress)\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "GIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation"
+  },
+  {
+    "objectID": "cv.html#teaching-experience",
+    "href": "cv.html#teaching-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2024) Developed lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data"
+  },
+  {
+    "objectID": "cv.html#awards-and-honors",
+    "href": "cv.html#awards-and-honors",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Weiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”"
+  },
+  {
+    "objectID": "cv.html#presentations",
+    "href": "cv.html#presentations",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "I am a teaching assistant in Geography department at the University of Oregon. I am particularly proud of the role I served as lab instructor for Remote Sensing I. In this course I developed lab material to teach students how to acquire imagery, manipulate and enhance it, classify it, and quantitatively analyze it.\nNot only do these labs introduce remote sensing concepts to students, but more importantly, they show students how to use GIS software for certain tasks. See lab exercises below."
+  },
+  {
+    "objectID": "code/HistogramRasterBands/index.html",
+    "href": "code/HistogramRasterBands/index.html",
+    "title": "Graphing raster distribution",
+    "section": "",
+    "text": "Histograms are the best way to get a glimpse of data, no? This code is useful if you have a multiband raster stack and want to plot the data distribution on a normalized scale. My output from this got a lot of thumbs ups at AGU this year.\n\nlibrary(terra)\n\nterra 1.8.5\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ tidyr::extract() masks terra::extract()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggridges)\nlibrary(dplyr)\nlibrary(RColorBrewer)\n\n# path to your multiband raster\npath &lt;- \"../FullComp_Dalton_2015.tif\"\n\n\n#example file\nr &lt;- rast(path)\nband_names &lt;- names(r)\nnormalize_layer &lt;- function(layer) {\n  min_val &lt;- min(layer[], na.rm = TRUE)\n  max_val &lt;- max(layer[], na.rm = TRUE)\n  normalized &lt;- (layer - min_val) / (max_val - min_val)\n  return(normalized)\n}\n\nnormalized_rasters &lt;- lapply(1:nlyr(r), function(i) {\n  band &lt;- r[[i]]\n  normalized_band &lt;- normalize_layer(band)\n  return(normalized_band)\n})\n\n# stack the normalized rasters\nnormalized_r &lt;- rast(normalized_rasters)\n\nConvert raster to df and plot it:\n\n#convert to df\ndf &lt;- as.data.frame(normalized_r, xy = FALSE, na.rm = TRUE)\ndf_long &lt;- df %&gt;%\n  pivot_longer(cols = everything(), \n               names_to = \"Band\", \n               values_to = \"Value\")\ndf_long_sampled &lt;- df_long %&gt;%\n  sample_n(500)\n\n#ridge plot\n#display.brewer.all()\ncolors &lt;- colorRampPalette(brewer.pal(11, \"Paired\"))(57)  # 57 colors\n\nplt &lt;- ggplot(df_long_sampled, aes(x = Value, y = Band, fill = Band)) +\n  geom_density_ridges_gradient(scale = 10, rel_min_height = 0.002, linewidth = 0.35) +\n  scale_fill_manual(values = colors)+\n  #scale_fill_viridis_d(option = \"plasma\") +  \n  theme(\n    axis.title = element_blank(),  \n    axis.text.x = element_blank(),\n    axis.text.y = element_text(size = 12, color = \"black\", face = \"bold\"),\n    axis.ticks = element_blank()   \n  )\n#plt\n\nAny band denoted with _1 is derived from a spring composite, _2, a summer composite, and _3, a fall composite. Hence, the color grouping in the plot. For context, these are layers that are used as inputs into a random forest model prior to remove correlated variables."
+  },
+  {
+    "objectID": "code/ContrastStretching/index.html",
+    "href": "code/ContrastStretching/index.html",
+    "title": "Constrast stretching",
+    "section": "",
+    "text": "Let’s read in a raster and set a color palette to visualize by. This example file is a modified normalized difference water index image within interior Alaska.\n\nlibrary(terra)\n\nterra 1.8.5\n\n\n\ncolors &lt;- colorRampPalette(c(\"white\", \"lightblue\", \n                             \"blue\", \"darkblue\", \"black\"))(100)\nr &lt;- rast(\"../FullComp_Dalton_2015.tif\", lyr = 24)\nplot(r, col = colors)\n\n\n\n\n\n\n\n\nLooks great. Now if we want to increase the contrast between different pixel values. We can do this\n\n# contrast stretch\np_low &lt;- quantile(values(r), 0.05, na.rm = TRUE)\np_high &lt;- quantile(values(r), 0.95, na.rm = TRUE) \n\nr_stretched &lt;- clamp((r - p_low) / (p_high - p_low), lower = 0, upper = 1)\nplot(r_stretched, col = colors)"
+  },
+  {
+    "objectID": "portfolio/maps/index.html",
+    "href": "portfolio/maps/index.html",
+    "title": "maps!",
+    "section": "",
+    "text": "AOI map for thesis\n\n\n\nChange detection map idea\n\n\n\nChange detection reclass map of total carbon in the year 2100. The left is no climate change the right is extreme climate change. This was a fun exercise of patience in R, attempting to draw a line at the right location with the right slope to mask my images by.\n\n\n\n\nLANDIS-II Output Maps\n\n\n\nComparison of number of simulated fires in LANDIS-II across three distinct climate scenarios. From top down: no climate change, moderate climate change, extreme climate change"
   }
 ]
