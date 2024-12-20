@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Department of Geography, University of Oregon\nTerrestrial Ecosystems Ecology and Landscapes Lab\nEmail: wesr@uoregon.edu | Linkedin: linked.com/wesleyrancher\n\n\n\nBiogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience.\n\n\n\n\n\n\nM.S. in Geography (in progress)\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley\n\n\n\n\n\n\nGIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish\n\n\n\n\n\n\n\nSeptember 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation\n\n\n\n\n\n\n\nSeptember 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2024) Developed lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data\n\n\n\n\n\n\nRippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022\n\n\n\n\n\n\nWeiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”\n\n\n\n\n\n\nRancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  },
+  {
+    "objectID": "cv.html#summary",
+    "href": "cv.html#summary",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Biogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography (in progress)\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "GIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation"
+  },
+  {
+    "objectID": "cv.html#teaching-experience",
+    "href": "cv.html#teaching-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2024) Developed lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data"
+  },
+  {
+    "objectID": "cv.html#awards-and-honors",
+    "href": "cv.html#awards-and-honors",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Weiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”"
+  },
+  {
+    "objectID": "cv.html#presentations",
+    "href": "cv.html#presentations",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  }
+]
