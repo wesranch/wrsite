@@ -1,0 +1,25 @@
+[
+  {
+    "listing": "/code.html",
+    "items": [
+      "/code/ContrastStretching/index.html",
+      "/code/HistogramRasterBands/index.html",
+      "/code/RasterSieving/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching.html",
+    "items": [
+      "/instructions/LabOne/index.html",
+      "/instructions/LabThree/index.html",
+      "/instructions/LabTwo/index.html"
+    ]
+  },
+  {
+    "listing": "/portfolio.html",
+    "items": [
+      "/portfolio/maps/index.html",
+      "/portfolio/publications/index.html"
+    ]
+  }
+]

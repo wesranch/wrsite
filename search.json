@@ -61,5 +61,40 @@
     "title": "Wesley Rancher",
     "section": "",
     "text": "Rancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "I am a second-year masters student at the University of Oregon working at the intersection of climate change, forest ecology, and spatial data science. I’m a part of the Terrestrial Ecosystems and Ecological Landscapes Lab (TEEL), and am working under the direction of Dr. Melissa Lucash.\nMy background is in hydrology and forest ecology, and I have experience using tools like ArcGIS, Google Earth Engine, Python, and R to answer questions about how ecosystems are changing. For example, my masters thesis is focused on mapping and modeling above-ground carbon density in interior Alaska using Landsat imagery, random forests, and a forest simulation model: LANDIS-II.\nA brief overview of what you will find on this site: my code page provides a glimpse of how I apply my GIS and programming skills to meet research objectives. My teaching page showcases labs I have developed which teach students how to apply key concepts in remote sensing. Lastly, some maps and posters I have made can be found on the portfolio page.\n\n\nM.S. in Geography University of Oregon | Eugene, OR (In progress)\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography University of Oregon | Eugene, OR (In progress)\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code Examples",
+    "section": "",
+    "text": "Constrast stretching\n\n\nLANDSAT, NDWI\n\n\n\nR\n\n\n\nEnhancement\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nGraphing raster distribution\n\n\nLANDSAT, Exploratory\n\n\n\nR\n\n\n\nAnalysis\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nRaster manipulation using terra\n\n\nLANDSAT, SIEVE\n\n\n\nR\n\n\n\nBand math and pixel sieving\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Lab exercises",
+    "section": "",
+    "text": "Lab one instructions\n\n\nLANDSAT, EarthExplorer\n\n\n\nQGIS\n\n\n\nData exploration, true color, display imagery\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab three instructions\n\n\nchange-detection, classification, k-means-clustering\n\n\n\nQGIS\n\n\n\nimage classification\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab two instructions\n\n\nimagery, enhance, visualization\n\n\n\nQGIS\n\n\n\nimage enhancement\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "maps, pubs, posters, etc.",
+    "section": "",
+    "text": "maps!\n\n\ncartography\n\n\n\nArcGIS\n\n\nR\n\n\n\nhere are some maps I have made\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npubs!\n\n\nscientific writing\n\n\n\nremote sensing\n\n\nglaciology\n\n\nthermal limits\n\n\nmellitology\n\n\n\nonly a co-author at the moment, but working on a manuscript!\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
