@@ -1,0 +1,289 @@
+[
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "maps and the like",
+    "section": "",
+    "text": "maps!\n\n\ncartography\n\n\n\nArcGIS\n\n\nR\n\n\n\nhere are some maps I have made\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\npubs!\n\n\nscientific writing\n\n\n\nremote sensing\n\n\nglaciology\n\n\nthermal limits\n\n\nmellitology\n\n\n\nonly a co-author at the moment, but working on a manuscript!\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "portfolio/publications/index.html#agu-2024",
+    "href": "portfolio/publications/index.html#agu-2024",
+    "title": "pubs!",
+    "section": "AGU 2024",
+    "text": "AGU 2024"
+  },
+  {
+    "objectID": "portfolio/publications/index.html#fire-and-natural-disturbance-2023",
+    "href": "portfolio/publications/index.html#fire-and-natural-disturbance-2023",
+    "title": "pubs!",
+    "section": "Fire and Natural Disturbance 2023",
+    "text": "Fire and Natural Disturbance 2023"
+  },
+  {
+    "objectID": "portfolio/publications/index.html#graphical-abstract-for-publication",
+    "href": "portfolio/publications/index.html#graphical-abstract-for-publication",
+    "title": "pubs!",
+    "section": "Graphical abstract for publication",
+    "text": "Graphical abstract for publication"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "I am a teaching assistant in Geography department at the University of Oregon. I am particularly proud of the role I served as lab instructor for Remote Sensing I. In this course I developed lab material to teach students how to acquire imagery, manipulate and enhance it, classify it, and quantitatively analyze it.\nNot only do these labs introduce remote sensing concepts to students, but more importantly, they show students how to use GIS software for certain tasks. See lab exercises below."
+  },
+  {
+    "objectID": "code/ContrastStretching/index.html",
+    "href": "code/ContrastStretching/index.html",
+    "title": "Constrast stretching",
+    "section": "",
+    "text": "Let’s read in a raster and set a color palette to visualize by. This example file is a modified normalized difference water index image within interior Alaska.\n\nlibrary(terra)\n\nterra 1.8.5\n\n\n\ncolors &lt;- colorRampPalette(c(\"white\", \"lightblue\", \n                             \"blue\", \"darkblue\", \"black\"))(100)\nr &lt;- rast(\"../FullComp_Dalton_2015.tif\", lyr = 24)\nplot(r, col = colors)\n\n\n\n\n\n\n\n\nLooks great. Now if we want to increase the contrast between different pixel values. We can do this\n\n# contrast stretch\np_low &lt;- quantile(values(r), 0.05, na.rm = TRUE)\np_high &lt;- quantile(values(r), 0.95, na.rm = TRUE) \n\nr_stretched &lt;- clamp((r - p_low) / (p_high - p_low), lower = 0, upper = 1)\nplot(r_stretched, col = colors)"
+  },
+  {
+    "objectID": "code/MosaicRasters/index.html",
+    "href": "code/MosaicRasters/index.html",
+    "title": "Mosaic rasters",
+    "section": "",
+    "text": "library(terra)\n\nterra 1.8.5"
+  },
+  {
+    "objectID": "code/MosaicRasters/index.html#terra",
+    "href": "code/MosaicRasters/index.html#terra",
+    "title": "Mosaic rasters",
+    "section": "",
+    "text": "library(terra)\n\nterra 1.8.5"
+  },
+  {
+    "objectID": "code/MosaicRasters/index.html#directory",
+    "href": "code/MosaicRasters/index.html#directory",
+    "title": "Mosaic rasters",
+    "section": "Directory",
+    "text": "Directory\n\n# dir and outdir\nfile_dir &lt;- \"/Users/wancher/Documents/weranch/code/tiffs/\"\n#setwd(file_dir)\n\n# read in the rasters \nlist_of_files &lt;- list.files(file_dir, pattern = \"S1A-.*\\\\.tif$\", full.names = TRUE)"
+  },
+  {
+    "objectID": "code/MosaicRasters/index.html#commenting-out-the-for-loop-and-just-work-with-files-from-one-year-for-this-example",
+    "href": "code/MosaicRasters/index.html#commenting-out-the-for-loop-and-just-work-with-files-from-one-year-for-this-example",
+    "title": "Mosaic rasters",
+    "section": "Commenting out the for loop and just work with files from one year for this example",
+    "text": "Commenting out the for loop and just work with files from one year for this example\n\n# iterate over a sequence of years and pull out files specific to the year in the sequence\n# mosaics &lt;- list()\n# years &lt;- seq(2019, 2023)\n# years_string &lt;- as.character(years)\n# for (i in seq_along(years_string)) {\n#   \n#   #pull out unique year\n#   year &lt;- years_string[[i]]\n#   files_one_year &lt;- list_of_files[grepl(year, list_of_files)]\n  files_one_year &lt;- list_of_files\n\n  \n  list_of_rasters &lt;- lapply(files_one_year, function(file) {\n    r &lt;- rast(file)\n    r\n  })\n  \n  # get band names for retention\n  #band_names &lt;- names(list_of_rasters[[1]])\n  #flattened_band_names &lt;- unlist(band_names)\n  \n  # turn list in sprc and mosaic\n  coll_of_rasters &lt;- sprc(list_of_rasters)\n  #print(paste0(year, \" start: \", Sys.time()))\n  mosaiced_raster &lt;- merge(coll_of_rasters) \n\n\n|---------|---------|---------|---------|\n=========================================\n                                          \n\n  #print(paste0(year, \" finish: \", Sys.time()))\n  #names(mosaiced_raster) &lt;- band_names\n  #print(names(mosaiced_raster))\n  #save it\n  # output_filename &lt;- paste0(file_dir, \"s1v-mosaic-\", year, \".tif\")\n  # print(output_filename)\n  # #writeRaster(mosaiced_raster, filename = output_filename, filetype = \"GTiff\", overwrite = TRUE)\n  # mosaics[[i]] &lt;- mosaiced_raster\n  # rm(list_of_rasters, coll_of_rasters, mosaiced_raster)\n  # gc()\n#}"
+  },
+  {
+    "objectID": "code/MosaicRasters/index.html#visualize",
+    "href": "code/MosaicRasters/index.html#visualize",
+    "title": "Mosaic rasters",
+    "section": "Visualize",
+    "text": "Visualize\n\n#without mosaicing\nfor (r in list_of_rasters){\n  plot(r)\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#after mosaic\nplot(mosaiced_raster, main = \"Summer 2023 C Band Composite\")"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code Examples",
+    "section": "",
+    "text": "Mosaic rasters\n\n\n\n\n\n\nR\n\n\nGEE\n\n\nLandsat\n\n\nimage-processing\n\n\n\n\n\n\n\n\n\nDec 27, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nConstrast stretching\n\n\n\n\n\n\nR\n\n\nLandsat\n\n\nenhancement\n\n\n\n\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nGraphing raster distribution\n\n\n\n\n\n\nR\n\n\nLandsat\n\n\nggplot\n\n\n\n\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nRaster manipulation using terra\n\n\n\n\n\n\nR\n\n\nLandsat\n\n\nimage-processing\n\n\n\n\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "instructions/LabThree/index.html",
+    "href": "instructions/LabThree/index.html",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "If you have been using ArcGIS, it is recommended to use QGIS for this lab.\n\n\n\n\nYou are provided with two Landsat images of the Portland metro and surrounding areas from two different image dates. The images are located in the shared folder of the class R drive. Your task is to classify pixels in the Landsat 8 image to match a classification schema of interest (e.g., land cover or forest type). You will use Google Earth for ground truth or “training” data in the classification workflow.\nThis lab is divided into three parts: 1. Unsupervised and Supervised Classification: Implement two different classification techniques and examine their advantages and disadvantages. 2. Accuracy Assessment: Compare your classification output to your training data to assess accuracy. 3. Change Detection Analysis: Apply the steps to the second Landsat image and assess landscape changes both qualitatively and quantitatively.\n\n\n\n\n\n\n\nWhat would you like to investigate about the landscape?\nCreate a classification key with class, value, and color as columns for reference.\nInsert your classification key here (screenshot or table).\n\n\n\n\n\n\nLoad Bands into QGIS:\n\nLoad all bands into QGIS.\nBuild a true-color composite or create a virtual raster for reference.\nSet the resolution to the highest possible and place input files into separate bands.\n\nInsert screenshot of your true-color composite in QGIS here.\nCreate a Region of Interest (ROI):\n\nZoom in to a specific region of interest.\nCreate a new shapefile layer:\n\nGo to Layer → Create Layer → New Shapefile Layer. Select polygon geometry and specify a file name.\n\nAdd features to your shapefile by selecting the pencil icon and drawing a box around your area of interest.\nRight-click to stop editing, enter 1 for the ID, and save edits.\n\nInsert screenshot of your shapefile and drawn ROI here.\nClip Raster by Mask Layer:\n\nSearch for Clip Raster by Mask Layer in the processing toolbox.\nInput layers: Raw band images (red, green, blue).\nMask layer: The shapefile you just created.\nRun the tool once for each input layer.\n\nInsert screenshot of clipped raster layers here.\nRun K-Means Clustering:\n\nSearch for K-means clustering for grids in the processing toolbox (equivalent to Iso Cluster Unsupervised Classification in ArcGIS).\nInput “grids”: The clipped/masked bands (red, green, blue).\nSet the number of clusters to match the classes in your key.\nDefine the number of iterations (consider experimenting with different values).\nPress Run and export the resulting layer as a TIF.\n\nInsert screenshot of the clustering process and output layer here.\nAdjust Symbology and Validate:\n\nChange the symbology of the output layer to paletted/unique values and use a random color ramp.\nValidate classification by comparing with your true color composite. Toggle the layers to inspect.\n\nInsert screenshot of output with color ramp and validation process here.\n\n\n\n\n\n\nObtain Training Data:\n\nYou can generate random points in the layer bounds.\n\nInput layer: The bounding box shapefile from step 2.\nThe number of points should be at least 10-15 points per class.\n\n\nInsert screenshot of random points or training points here.\nLabel Points in Google Earth:\n\nOpen Google Earth and import your KML file (if using random points).\nLabel your points using your classification key based on land feature interpretation.\nIf the random points are not well-placed, manually adjust them in Google Earth.\n\nInsert screenshot of labeled points in Google Earth here.\nExport Training Data:\n\nRight-click the KML layer in Google Earth and export it.\nImport the KML file into QGIS and export it as a shapefile. Make sure the file name is clear (e.g., train_points_10classes_10obs.shp).\n\nInsert screenshot of shapefile with training points here.\nAdd a Value Column:\n\nOpen the attribute table of your training points shapefile.\nAdd a new field to assign numerical values to your classes.\n\nInsert screenshot of the attribute table and new field here.\nInstall dzetsaka Plugin:\n\nInstall the dzetsaka classification tool by going to Plugins → Manage and Install Plugins. Search for dzetsaka and install it.\nIn the Python Console, type:\nimport pip\npip.main(['install', 'scikit-learn'])\n\nInsert screenshot of dzetsaka plugin installation here.\nTrain Classifier:\n\nUnder the dzetsaka classification tool, select Train Algorithm.\nInput raster: The raster you want the model to learn (e.g., true-color composite).\nInput layer: Your training points shapefile. Set the field to the column with numerical value assignments.\nSelect the K-nearest neighbors algorithm (start with this one).\nSet the pixel percentage for validation to 20% and specify the output model path.\n\nInsert screenshot of classifier training setup here.\nPredict Classifications:\n\nAfter training, select Predict Model under the dzetsaka tool.\nInput raster: The same raster you trained the model with.\nSpecify the output raster file name and ensure it’s saved as a .tif file.\n\nInsert screenshot of classification output prediction here.\n\n\n\n\n\n\nWhat are you trying to classify? Insert your response here.\nWhich technique performed better and why? Insert your response here.\nWhat is the k-means clustering algorithm doing? And the K-nearest neighbors algorithm? Insert your response here.\nWhat biases could be introduced in the training process? How was the training data distributed spatially? How many observations per class? Insert your response here.\n\n\n\n\n\n\n\nGenerate a Confusion Matrix:\n\nTo assess accuracy, you need to generate a confusion matrix. You may need to install the Orfeo ToolBox plugin for this.\nInstall it by downloading from Orfeo ToolBox and placing it in the C:/Program Files/QGIS directory.\nSearch for ComputeConfusionMatrix and set the input image to your classified image, with ground truth set to your training points.\n\nInsert screenshot of confusion matrix for both supervised and unsupervised classification here.\nReport Accuracy Metrics:\n\nCalculate and report:\n\nOverall Accuracy\nProducers Accuracy\nUsers Accuracy\n\n\nInsert your confusion matrix results and interpretation here.\n\n\n\n\n\nWhat were your accuracy results? What does each statistic tell you? Insert your response here.\nWhich classification technique performed better? Insert your response here.\nWhat do you think was the greatest flaw in your classification workflow? Insert your response here.\nWhich classes are underclassified and overclassified? Insert your response here.\nAre there consistencies in accuracy between supervised and unsupervised methods? Insert your response here.\nHow might the accuracy of your classification be improved? Insert your response here.\nWhat type of classification technique are supervised and unsupervised methods? Insert your response here.\nWhat other types of classification techniques are there? Insert your response here.\n\n\n\n\n\n\n\nPerform Change Detection:\nUse the same process to perform post-classification change detection with the second Landsat image. Look for changes in land cover such as forest to non-forest or grassland to urban.\nInvestigate changes in terms of percent area or proportion of the landscape. Quantify the change in m² or hectares and assess the implications.\nInsert screenshot of change detection output here.\n\n\n\n\n\nReflect on the findings from each part of the lab, the effectiveness of the classification techniques, and the insights gained from the change detection analysis."
+  },
+  {
+    "objectID": "instructions/LabThree/index.html#software",
+    "href": "instructions/LabThree/index.html#software",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "If you have been using ArcGIS, it is recommended to use QGIS for this lab."
+  },
+  {
+    "objectID": "instructions/LabThree/index.html#overview",
+    "href": "instructions/LabThree/index.html#overview",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "You are provided with two Landsat images of the Portland metro and surrounding areas from two different image dates. The images are located in the shared folder of the class R drive. Your task is to classify pixels in the Landsat 8 image to match a classification schema of interest (e.g., land cover or forest type). You will use Google Earth for ground truth or “training” data in the classification workflow.\nThis lab is divided into three parts: 1. Unsupervised and Supervised Classification: Implement two different classification techniques and examine their advantages and disadvantages. 2. Accuracy Assessment: Compare your classification output to your training data to assess accuracy. 3. Change Detection Analysis: Apply the steps to the second Landsat image and assess landscape changes both qualitatively and quantitatively."
+  },
+  {
+    "objectID": "instructions/LabThree/index.html#part-one-classification",
+    "href": "instructions/LabThree/index.html#part-one-classification",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "What would you like to investigate about the landscape?\nCreate a classification key with class, value, and color as columns for reference.\nInsert your classification key here (screenshot or table).\n\n\n\n\n\n\nLoad Bands into QGIS:\n\nLoad all bands into QGIS.\nBuild a true-color composite or create a virtual raster for reference.\nSet the resolution to the highest possible and place input files into separate bands.\n\nInsert screenshot of your true-color composite in QGIS here.\nCreate a Region of Interest (ROI):\n\nZoom in to a specific region of interest.\nCreate a new shapefile layer:\n\nGo to Layer → Create Layer → New Shapefile Layer. Select polygon geometry and specify a file name.\n\nAdd features to your shapefile by selecting the pencil icon and drawing a box around your area of interest.\nRight-click to stop editing, enter 1 for the ID, and save edits.\n\nInsert screenshot of your shapefile and drawn ROI here.\nClip Raster by Mask Layer:\n\nSearch for Clip Raster by Mask Layer in the processing toolbox.\nInput layers: Raw band images (red, green, blue).\nMask layer: The shapefile you just created.\nRun the tool once for each input layer.\n\nInsert screenshot of clipped raster layers here.\nRun K-Means Clustering:\n\nSearch for K-means clustering for grids in the processing toolbox (equivalent to Iso Cluster Unsupervised Classification in ArcGIS).\nInput “grids”: The clipped/masked bands (red, green, blue).\nSet the number of clusters to match the classes in your key.\nDefine the number of iterations (consider experimenting with different values).\nPress Run and export the resulting layer as a TIF.\n\nInsert screenshot of the clustering process and output layer here.\nAdjust Symbology and Validate:\n\nChange the symbology of the output layer to paletted/unique values and use a random color ramp.\nValidate classification by comparing with your true color composite. Toggle the layers to inspect.\n\nInsert screenshot of output with color ramp and validation process here.\n\n\n\n\n\n\nObtain Training Data:\n\nYou can generate random points in the layer bounds.\n\nInput layer: The bounding box shapefile from step 2.\nThe number of points should be at least 10-15 points per class.\n\n\nInsert screenshot of random points or training points here.\nLabel Points in Google Earth:\n\nOpen Google Earth and import your KML file (if using random points).\nLabel your points using your classification key based on land feature interpretation.\nIf the random points are not well-placed, manually adjust them in Google Earth.\n\nInsert screenshot of labeled points in Google Earth here.\nExport Training Data:\n\nRight-click the KML layer in Google Earth and export it.\nImport the KML file into QGIS and export it as a shapefile. Make sure the file name is clear (e.g., train_points_10classes_10obs.shp).\n\nInsert screenshot of shapefile with training points here.\nAdd a Value Column:\n\nOpen the attribute table of your training points shapefile.\nAdd a new field to assign numerical values to your classes.\n\nInsert screenshot of the attribute table and new field here.\nInstall dzetsaka Plugin:\n\nInstall the dzetsaka classification tool by going to Plugins → Manage and Install Plugins. Search for dzetsaka and install it.\nIn the Python Console, type:\nimport pip\npip.main(['install', 'scikit-learn'])\n\nInsert screenshot of dzetsaka plugin installation here.\nTrain Classifier:\n\nUnder the dzetsaka classification tool, select Train Algorithm.\nInput raster: The raster you want the model to learn (e.g., true-color composite).\nInput layer: Your training points shapefile. Set the field to the column with numerical value assignments.\nSelect the K-nearest neighbors algorithm (start with this one).\nSet the pixel percentage for validation to 20% and specify the output model path.\n\nInsert screenshot of classifier training setup here.\nPredict Classifications:\n\nAfter training, select Predict Model under the dzetsaka tool.\nInput raster: The same raster you trained the model with.\nSpecify the output raster file name and ensure it’s saved as a .tif file.\n\nInsert screenshot of classification output prediction here.\n\n\n\n\n\n\nWhat are you trying to classify? Insert your response here.\nWhich technique performed better and why? Insert your response here.\nWhat is the k-means clustering algorithm doing? And the K-nearest neighbors algorithm? Insert your response here.\nWhat biases could be introduced in the training process? How was the training data distributed spatially? How many observations per class? Insert your response here."
+  },
+  {
+    "objectID": "instructions/LabThree/index.html#part-two-accuracy-assessment",
+    "href": "instructions/LabThree/index.html#part-two-accuracy-assessment",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "Generate a Confusion Matrix:\n\nTo assess accuracy, you need to generate a confusion matrix. You may need to install the Orfeo ToolBox plugin for this.\nInstall it by downloading from Orfeo ToolBox and placing it in the C:/Program Files/QGIS directory.\nSearch for ComputeConfusionMatrix and set the input image to your classified image, with ground truth set to your training points.\n\nInsert screenshot of confusion matrix for both supervised and unsupervised classification here.\nReport Accuracy Metrics:\n\nCalculate and report:\n\nOverall Accuracy\nProducers Accuracy\nUsers Accuracy\n\n\nInsert your confusion matrix results and interpretation here.\n\n\n\n\n\nWhat were your accuracy results? What does each statistic tell you? Insert your response here.\nWhich classification technique performed better? Insert your response here.\nWhat do you think was the greatest flaw in your classification workflow? Insert your response here.\nWhich classes are underclassified and overclassified? Insert your response here.\nAre there consistencies in accuracy between supervised and unsupervised methods? Insert your response here.\nHow might the accuracy of your classification be improved? Insert your response here.\nWhat type of classification technique are supervised and unsupervised methods? Insert your response here.\nWhat other types of classification techniques are there? Insert your response here."
+  },
+  {
+    "objectID": "instructions/LabThree/index.html#part-three-change-detection",
+    "href": "instructions/LabThree/index.html#part-three-change-detection",
+    "title": "Lab three instructions",
+    "section": "",
+    "text": "Perform Change Detection:\nUse the same process to perform post-classification change detection with the second Landsat image. Look for changes in land cover such as forest to non-forest or grassland to urban.\nInvestigate changes in terms of percent area or proportion of the landscape. Quantify the change in m² or hectares and assess the implications.\nInsert screenshot of change detection output here.\n\n\n\n\n\nReflect on the findings from each part of the lab, the effectiveness of the classification techniques, and the insights gained from the change detection analysis."
+  },
+  {
+    "objectID": "instructions/LabOne/index.html",
+    "href": "instructions/LabOne/index.html",
+    "title": "Lab one instructions",
+    "section": "",
+    "text": "Get software working and a reliable place to save files.\nInspect, display, and compare at least 5 types of remote sensing images.\nAcquaint yourselves with common terms that refer to image attributes and phenomena.\n\n\n\n\nFor this lab, you will need: - QGIS (which should be installed on machines in SSIL) - EarthExplorer (requires an account)\n\n\n\n\nSet up a directory:\n\nCreate a directory where you will save your files for this class. Consider using Dropbox or Google Drive for easy access and backup.\n\nForm groups:\n\nIf you prefer, form groups and track how the labor is divided. Each student will need to submit their work as a PDF.\n\nSelect a study area:\n\nChoose a study area within the US (preferably CONUS). Make sure it’s an area you wouldn’t mind revisiting in future labs.\n\nDownload 5 types of remotely sensed images:\n\nSelect images from different sensors (e.g., Landsat, aerial imagery, or other satellites).\nYou can use EarthExplorer or other reliable sources for downloading.\nBe sure to download the metadata for each image if available.\n\nUse Google and Online Resources:\n\nGoogle is your friend! Utilize resources like Stack Exchange GIS Community for troubleshooting.\n\n\n\n\n\n\n\nYour final submission should be a PDF containing:\n\nScreenshot of each image with brief description\nDiscuss trade offs between images\nA brief reflection on the types of imagery you would use for specific studies"
+  },
+  {
+    "objectID": "instructions/LabOne/index.html#theme-downloading-and-analyzing-imagery-from-different-satellite-and-aerial-sources",
+    "href": "instructions/LabOne/index.html#theme-downloading-and-analyzing-imagery-from-different-satellite-and-aerial-sources",
+    "title": "Lab one instructions",
+    "section": "",
+    "text": "Get software working and a reliable place to save files.\nInspect, display, and compare at least 5 types of remote sensing images.\nAcquaint yourselves with common terms that refer to image attributes and phenomena.\n\n\n\n\nFor this lab, you will need: - QGIS (which should be installed on machines in SSIL) - EarthExplorer (requires an account)\n\n\n\n\nSet up a directory:\n\nCreate a directory where you will save your files for this class. Consider using Dropbox or Google Drive for easy access and backup.\n\nForm groups:\n\nIf you prefer, form groups and track how the labor is divided. Each student will need to submit their work as a PDF.\n\nSelect a study area:\n\nChoose a study area within the US (preferably CONUS). Make sure it’s an area you wouldn’t mind revisiting in future labs.\n\nDownload 5 types of remotely sensed images:\n\nSelect images from different sensors (e.g., Landsat, aerial imagery, or other satellites).\nYou can use EarthExplorer or other reliable sources for downloading.\nBe sure to download the metadata for each image if available.\n\nUse Google and Online Resources:\n\nGoogle is your friend! Utilize resources like Stack Exchange GIS Community for troubleshooting.\n\n\n\n\n\n\n\nYour final submission should be a PDF containing:\n\nScreenshot of each image with brief description\nDiscuss trade offs between images\nA brief reflection on the types of imagery you would use for specific studies"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Lab exercises",
+    "section": "",
+    "text": "Lab one instructions\n\n\nLANDSAT, EarthExplorer\n\n\n\nQGIS\n\n\n\nData exploration, true color, display imagery\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab three instructions\n\n\nchange-detection, classification, k-means-clustering\n\n\n\nQGIS\n\n\n\nimage classification\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\n\n\n\n\n\n\nLab two instructions\n\n\nimagery, enhance, visualization\n\n\n\nQGIS\n\n\n\nimage enhancement\n\n\n\n\n\nDec 19, 2024\n\n\nWesley Rancher\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "instructions/LabTwo/index.html",
+    "href": "instructions/LabTwo/index.html",
+    "title": "Lab two instructions",
+    "section": "",
+    "text": "In your group, you should use your Region of Interest (ROI) to acquire satellite data. Follow the steps below:\n\nDownload Data: First, download your satellite data from Earth Explorer. Drop a pin as close to your ROI as possible.\nLandsat Scenes: You need to download TWO Landsat scenes from different time periods (at least 10 years apart). Be sure to download all the bands and metadata. This will help in understanding the details of the imagery and provide extra information when needed.\nImport Data into QGIS: Once the data is downloaded, bring the Landsat scenes into QGIS for further analysis.\n\n\n\n\nHere are some techniques you can apply in QGIS using the symbology pane:\n\n\n\nWhat is Contrast Stretching?\nWhat parameters did you change and what was the result?\n\n\n\n\n\nWhat color ramps did you experiment with?\n\n\n\n\n\nWhat is Pan Sharpening?\nDid you try pan sharpening?\n\n\n\n\n\nDid you try any high or low pass filtering?\n\n\n\n\n\nWhat is a Spectral Index?\nWhy did you choose the spectral index you used?\nHow did you perform band math in QGIS?\n\n\n\n\n\nYour submission should include: - An introduction to your study area and the analysis you are interested in. - Any images you generated or manipulated from the raw data that you found helpful (include screenshots). - A brief explanation of the techniques you used to enhance the imagery, including how these techniques work, how you implemented them in QGIS, and the insights you gained.\nThe final report should be submitted as a PDF.\n\n\n\n\nWhat is pan sharpening? Contrast stretching?\n\nWhat parameters did you change and what was the result?\n\nWhat is a spectral index? Why is the spectral index you chose relevant for your region of interest?\nHow do you perform band math in QGIS?\nDid you try any filtering or smoothing?"
+  },
+  {
+    "objectID": "instructions/LabTwo/index.html#objective",
+    "href": "instructions/LabTwo/index.html#objective",
+    "title": "Lab two instructions",
+    "section": "",
+    "text": "In your group, you should use your Region of Interest (ROI) to acquire satellite data. Follow the steps below:\n\nDownload Data: First, download your satellite data from Earth Explorer. Drop a pin as close to your ROI as possible.\nLandsat Scenes: You need to download TWO Landsat scenes from different time periods (at least 10 years apart). Be sure to download all the bands and metadata. This will help in understanding the details of the imagery and provide extra information when needed.\nImport Data into QGIS: Once the data is downloaded, bring the Landsat scenes into QGIS for further analysis."
+  },
+  {
+    "objectID": "instructions/LabTwo/index.html#image-enhancement-techniques",
+    "href": "instructions/LabTwo/index.html#image-enhancement-techniques",
+    "title": "Lab two instructions",
+    "section": "",
+    "text": "Here are some techniques you can apply in QGIS using the symbology pane:\n\n\n\nWhat is Contrast Stretching?\nWhat parameters did you change and what was the result?\n\n\n\n\n\nWhat color ramps did you experiment with?\n\n\n\n\n\nWhat is Pan Sharpening?\nDid you try pan sharpening?\n\n\n\n\n\nDid you try any high or low pass filtering?\n\n\n\n\n\nWhat is a Spectral Index?\nWhy did you choose the spectral index you used?\nHow did you perform band math in QGIS?"
+  },
+  {
+    "objectID": "instructions/LabTwo/index.html#submission",
+    "href": "instructions/LabTwo/index.html#submission",
+    "title": "Lab two instructions",
+    "section": "",
+    "text": "Your submission should include: - An introduction to your study area and the analysis you are interested in. - Any images you generated or manipulated from the raw data that you found helpful (include screenshots). - A brief explanation of the techniques you used to enhance the imagery, including how these techniques work, how you implemented them in QGIS, and the insights you gained.\nThe final report should be submitted as a PDF."
+  },
+  {
+    "objectID": "instructions/LabTwo/index.html#questions-to-guide-the-workflow",
+    "href": "instructions/LabTwo/index.html#questions-to-guide-the-workflow",
+    "title": "Lab two instructions",
+    "section": "",
+    "text": "What is pan sharpening? Contrast stretching?\n\nWhat parameters did you change and what was the result?\n\nWhat is a spectral index? Why is the spectral index you chose relevant for your region of interest?\nHow do you perform band math in QGIS?\nDid you try any filtering or smoothing?"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Maps and such",
+    "section": "",
+    "text": "This is the landscape in interior Alaska which my thesis is focused on. It is a roughly 8 million hectare landscape (black outline) fixed within the Alaska and Brooks mountain ranges.\n\nHere is my take on a change detection map. This map is neat because the time step and species visualized can be adjusted based on your data."
+  },
+  {
+    "objectID": "code/HistogramRasterBands/index.html",
+    "href": "code/HistogramRasterBands/index.html",
+    "title": "Graphing raster distribution",
+    "section": "",
+    "text": "Histograms are the best way to get a glimpse of data, no? This code is useful if you have a multiband raster stack and want to plot the data distribution on a normalized scale. My output from this got a lot of thumbs ups at AGU this year.\n\nlibrary(terra)\n\nterra 1.8.5\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ tidyr::extract() masks terra::extract()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(ggridges)\nlibrary(dplyr)\nlibrary(RColorBrewer)\n\n# path to your multiband raster\npath &lt;- \"../FullComp_Dalton_2015.tif\"\n\n\n#example file\nr &lt;- rast(path)\nband_names &lt;- names(r)\nnormalize_layer &lt;- function(layer) {\n  min_val &lt;- min(layer[], na.rm = TRUE)\n  max_val &lt;- max(layer[], na.rm = TRUE)\n  normalized &lt;- (layer - min_val) / (max_val - min_val)\n  return(normalized)\n}\n\nnormalized_rasters &lt;- lapply(1:nlyr(r), function(i) {\n  band &lt;- r[[i]]\n  normalized_band &lt;- normalize_layer(band)\n  return(normalized_band)\n})\n\n# stack the normalized rasters\nnormalized_r &lt;- rast(normalized_rasters)\n\nConvert raster to df and plot it:\n\n#convert to df\ndf &lt;- as.data.frame(normalized_r, xy = FALSE, na.rm = TRUE)\ndf_long &lt;- df %&gt;%\n  pivot_longer(cols = everything(), \n               names_to = \"Band\", \n               values_to = \"Value\")\ndf_long_sampled &lt;- df_long %&gt;%\n  sample_n(500)\n\n#ridge plot\n#display.brewer.all()\ncolors &lt;- colorRampPalette(brewer.pal(11, \"Paired\"))(57)  # 57 colors\n\nplt &lt;- ggplot(df_long_sampled, aes(x = Value, y = Band, fill = Band)) +\n  geom_density_ridges_gradient(scale = 10, rel_min_height = 0.002, linewidth = 0.35) +\n  scale_fill_manual(values = colors)+\n  #scale_fill_viridis_d(option = \"plasma\") +  \n  theme(\n    axis.title = element_blank(),  \n    axis.text.x = element_blank(),\n    axis.text.y = element_text(size = 12, color = \"black\", face = \"bold\"),\n    axis.ticks = element_blank()   \n  )\n#plt\n\nAny band denoted with _1 is derived from a spring composite, _2, a summer composite, and _3, a fall composite. Hence, the color grouping in the plot. For context, these are layers that are used as inputs into a random forest model prior to remove correlated variables."
+  },
+  {
+    "objectID": "code/RasterSieving/index.html",
+    "href": "code/RasterSieving/index.html",
+    "title": "Raster manipulation using terra",
+    "section": "",
+    "text": "This R script reads in NDWI images derived the blue-red/blue+red equation, converts them to binary images using a threshold from the literature, and then removes outlier pixels which are disconnected from large water bodies.\n\n# setting up\nlibrary(terra)\n\nterra 1.8.5\n\n\nJust working with one file in this example. But you can imagine reading in a list of files and performing this operation iteratively with a for loop.\n\nr &lt;- rast(\"../ndwi_ice_small.tif\")\nplot(r)\n\n\n\n\n\n\n\n\nSo this is what the NDWI image looks like. Let’s visualize as lake vs non lake.\n\nlake_mask &lt;- r &gt; 0.25\nplot(lake_mask)\n\n\n\n\n\n\n\n\nThis looks good but if you look at some of the isolated yellow pixels, they would then be considered a lake pixel even if disconnected from the larger lake. So we remove those.\n\n# function to sieve\nlake_sieve &lt;- function(ndwi_thres_raster) {\n  # get connected components\n  connected_comp &lt;- patches(ndwi_thres_raster, directions = 4, zeroAsNA = TRUE)\n  components &lt;- unique(values(connected_comp), na.rm = TRUE)\n  components &lt;- components[components != 0 & !is.na(components)]\n  cell_indices &lt;- unique(values(connected_comp, na.rm = TRUE))\n  # empty mask for valid lakes\n  valid_lake_mask &lt;- rast(ndwi_thres_raster)\n  values(valid_lake_mask) &lt;- 0\n  min_pixel &lt;- 10\n  min_width &lt;- 1\n  #loop over each ndwi scene\n  for (comp_id in components) {\n    # get cell indices for the current cc\n    cell_indices &lt;- which(values(connected_comp) == comp_id)\n    if (length(cell_indices) &lt; min_pixel) next\n    # convert cell indices to coordinates\n    coords &lt;- xyFromCell(ndwi_thres_raster, cell_indices)\n    width &lt;- length(unique(coords[, \"x\"]))\n    height &lt;- length(unique(coords[, \"y\"]))\n    # check if the component meets width/height requirements\n    if (width &lt;= min_width || height &lt;= min_width) next\n    values(valid_lake_mask)[cell_indices] &lt;- 1 #update valid lake\n  }\n  return(valid_lake_mask)\n}\n\nApply the function\n\nsieved_r &lt;- lake_sieve(lake_mask)\nplot(sieved_r)\n\n\n\n\n\n\n\n\nLooking good!! This is just a qualitative sieving technique and could easily adapt to more stats-based approaches. This layer can now be used to mask other rasters to. In my approach, I mask images in the red and panchromatic wavelengths by this image to isolate lakes and apply radiative transfer equations."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "I’m a master’s student at the University of Oregon, where I use spatial data science to tackle questions about climate change and forest ecology. My thesis focuses on mapping and modeling above-ground carbon density in Interior Alaska with Landsat imagery, random forests, and a forest simulation model, LANDIS-II.\nI bring experience in hydrology, forest ecology, and geospatial analysis using tools like Google Earth Engine, R, Python, and ArcGIS. I’ve developed cloud-based data processing algorithms, and conducted simulation modeling and machine learning in HPC environments using the AWS CLI, Bash, and Docker.\nOn this site, you’ll find:\n\nReproducible code examples for spatial data and statistical analyses.\nTeaching materials I’ve developed to help students apply remote sensing concepts.\nMaps, posters, and publications as my form of a portfolio.\n\n\n\nM.S. in Geography (In progress) University of Oregon | Eugene, OR\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography (In progress) University of Oregon | Eugene, OR\nB.A. in Environmental Studies, Geography, and Philosophy Ohio Wesleyan University | Delaware, OH"
+  },
+  {
+    "objectID": "portfolio/maps/index.html",
+    "href": "portfolio/maps/index.html",
+    "title": "maps!",
+    "section": "",
+    "text": "AOI map for thesis\n\n\n\nChange detection map idea\n\n\n\nChange detection reclass map of total carbon in the year 2100. Split by diagonal line in the middle. The left is no climate change the right is extreme climate change. This was a fun exercise of patience in R, attempting to draw a line at the right location with the right slope to mask my images by.\n\n\n\n\nLANDIS-II Output Maps\n\n\n\nComparison of number of simulated fires in LANDIS-II across three distinct climate scenarios. From top down: no climate change, moderate climate change, extreme climate change\n\n\n\n\nLandsat Composite\n\n\n\nSometimes imagery without context can be visually pleasing. This is a composite image within Interior Alaska where tasseled cap brightness is displayed in the red channel, greenness in green, and wetness in the blue channel."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Department of Geography, University of Oregon\nTerrestrial Ecosystems Ecology and Landscapes Lab\nEmail: wesr@uoregon.edu | Linkedin | github\n\n\n\nBiogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience.\n\n\n\n\n\n\nM.S. in Geography\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley\n\n\n\n\n\n\nGIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish\n\n\n\n\n\n\n\nSeptember 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data, and climate projections with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP5 and CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation\n\n\n\n\n\n\n\nSeptember 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2025)\nDeveloped lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data\n\n\n\n\n\n\nRippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022\n\n\n\n\n\n\nWeiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”\n\n\n\n\n\n\nRancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  },
+  {
+    "objectID": "cv.html#summary",
+    "href": "cv.html#summary",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Biogeographer specializing in spatial data science and ecology, with a focus on understanding ecosystem dynamics and environmental change across diverse landscapes and time scales. Skilled in GIS, remote sensing, and spatial modeling, and passionate about leveraging these tools to address pressing environmental problems and communicate research findings to the public. Eager to contribute to research and industry initiatives that support data-driven climate solutions and enhance ecological and social resilience."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "M.S. in Geography\nGPA: 3.9\nAdvisor: Dr. Melissa Lucash\n\n\n\nB.A. in Environmental Studies and Geography\nMinor in Philosophy\nGPA: 3.5\nAdvisor: Dr. Nathan Rowley"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "GIS & Remote Sensing: Advanced in ArcGIS, QGIS, Google Earth Engine\n\nProgramming: Advanced in R and Python; proficient in Bash and GitHub\n\nDrone Operation & Image Processing: FAA Certified Remote UAS Pilot (#4802988); experience with Pix4D, Drone2Map, Agisoft; proficient in LiDAR and Dual Red-Edge sensors calibration\n\nLanguages: Working proficiency in Spanish"
+  },
+  {
+    "objectID": "cv.html#research-experience",
+    "href": "cv.html#research-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nAdvisor: Dr. Melissa Lucash\n- Quantified aboveground carbon dynamics in boreal Alaska using remote sensing and simulation modeling\n- Wrote code in Python API for Google Earth Engine to perform atmospheric correction, cross-sensor calibration, and spectral index calculations\n- Integrated remote sensing data, and climate projections with LANDIS-II model to simulate ecosystem change in boreal Alaska\n- Analyzed large climate datasets from CMIP5 and CMIP6\n\n\n\nJune 2023 – August 2023\nAdvisor: Dr. Anthony Vorster\n- Collaborated with Grand Staircase Escalante Partners to map invasive plant communities in the Paria River Watershed, Utah\n- Processed large datasets using Google Earth Engine, R, and ArcGIS\n\n\n\nDecember 2022 – May 2023\nAdvisor: Dr. Nathan Rowley\n- Estimated supraglacial lake depth development in Western Greenland using radiative transfer models\n- Developed workflows in Google Earth Engine for Landsat data acquisition\n\n\n\nJune 2022 – July 2022\nAdvisor: Dr. Victor Gonzalez\n- Analyzed climate stressors on heat tolerances of honeybees and sweat bees in Lesvos, Greece\n- Discovered that bees remain heat tolerant following desiccation and starvation"
+  },
+  {
+    "objectID": "cv.html#teaching-experience",
+    "href": "cv.html#teaching-experience",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "September 2023 – Present\nLab Instructor – Geography 485/585: Remote Sensing I (Fall, Winter 2025)\nDeveloped lab exercises, taught GIS and remote sensing software, and provided virtual and in-person demonstrations\nCourse Assistant – Geography 199: Global Wildfire (Spring 2024)\nSupported curriculum development and provided supplemental instruction\nGuest Lecturer\nGeography 199: “Changing Wildfire in Brazil”\nGeography 199: “Bees and Wildfire”\nLab Instructor – Geography 181: Our Digital Earth (Fall 2023, Winter 2024)\nFacilitated labs on digital mapping and spatial data"
+  },
+  {
+    "objectID": "cv.html#awards-and-honors",
+    "href": "cv.html#awards-and-honors",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rippey Research Grant ($1000, UO) – 2024\n\nNASA Develop Scholarship ($1500, SSAI) – 2023\n\nDean’s List (OWU) – Fall ’22, Spring ’20, ’22, ’23\n\nRobert E. Shanklin Distinguished Scholar (Geography, OWU) – 2023\n\nPhi Sigma Tau (Philosophy, OWU) – 2023\n\nOur New Gold Digital Storytelling Winner (Spanish, OWU) – 2022"
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Weiss S, Rancher W, Hayes K, Buma B, Lucash MS. 2024. “Wildfire Dynamics Under Climate Change in Interior Alaska” (In preparation)\n\nGonzalez VHB., Rancher W, Vigil R, Garino-Heisey I, Oyen K, Tscheulin T, Petanidou T, Hranitz J, Barthell J. 2024. “Bees Remain Heat Tolerant After Acute Exposure to Desiccation and Starvation”\n\nRowley N, Rancher W, Karmosky C. 2024. “Comparison of Multiple Methods for Supraglacial Melt-Lake Volume Estimation in Western Greenland During the 2021 Summer Melt Season”"
+  },
+  {
+    "objectID": "cv.html#presentations",
+    "href": "cv.html#presentations",
+    "title": "Wesley Rancher",
+    "section": "",
+    "text": "Rancher W, Matsumoto H, Lamping J, Lucash ML. 2024. “Assessing Vegetation Shifts in Boreal Alaska by Integrating Landsat Imagery with Spatial Modeling” – American Geophysical Union – Washington, DC (Poster)\n\nRancher W, VanArnam M, Kowalski A, Anarella T, Vorster A. 2023. “Mapping Russian Olive and Tamarisk to Inform Invasive Species Management along the Paria River, Utah” – NASA Develop Day – Washington, DC (Virtual talk)\n\nRancher W, Rowley N. 2023. “Estimating Supraglacial Melt Lake Volume Changes in West Central Greenland Using Multiple Remote Sensing Methods” – Ohio Wesleyan Spring Symposium – Delaware, OH (Poster)\n\nRancher W, Vigil R, Garino-Heisey I, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – Ohio Wesleyan Connection Conference – Delaware, Ohio (Poster)\n\nRancher W, Gonzalez V. 2022. “Effects of Desiccation on Bees’ Heat Tolerance” – IUSSI Sección Andina y del Caribe – Panama City, Panama (Talk)"
+  }
+]
