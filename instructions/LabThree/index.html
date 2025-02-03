@@ -59,7 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -102,6 +102,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -159,24 +163,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#image-classification-lab" id="toc-image-classification-lab" class="nav-link active" data-scroll-target="#image-classification-lab">Image Classification Lab</a>
+  <li><a href="#software" id="toc-software" class="nav-link active" data-scroll-target="#software">Software:</a>
   <ul class="collapse">
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software:</a></li>
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview:</a></li>
-  <li><a href="#part-one-classification" id="toc-part-one-classification" class="nav-link" data-scroll-target="#part-one-classification">Part One: Classification</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-one" id="toc-part-one" class="nav-link" data-scroll-target="#part-one">Part One</a>
   <ul class="collapse">
-  <li><a href="#step-1-create-a-classification-schema" id="toc-step-1-create-a-classification-schema" class="nav-link" data-scroll-target="#step-1-create-a-classification-schema">Step 1: Create a Classification Schema</a></li>
-  <li><a href="#unsupervised-pixel-based-classification" id="toc-unsupervised-pixel-based-classification" class="nav-link" data-scroll-target="#unsupervised-pixel-based-classification">Unsupervised Pixel-Based Classification</a></li>
-  <li><a href="#supervised-pixel-based-classification" id="toc-supervised-pixel-based-classification" class="nav-link" data-scroll-target="#supervised-pixel-based-classification">Supervised Pixel-Based Classification</a></li>
-  <li><a href="#questions-for-part-one" id="toc-questions-for-part-one" class="nav-link" data-scroll-target="#questions-for-part-one">Questions for Part One:</a></li>
+  <li><a href="#unsupervised-pixel-based-classification" id="toc-unsupervised-pixel-based-classification" class="nav-link" data-scroll-target="#unsupervised-pixel-based-classification">Unsupervised Pixel Based Classification</a></li>
+  <li><a href="#part-two" id="toc-part-two" class="nav-link" data-scroll-target="#part-two">Part Two</a></li>
+  <li><a href="#supervised-pixel-based-classification" id="toc-supervised-pixel-based-classification" class="nav-link" data-scroll-target="#supervised-pixel-based-classification">Supervised Pixel Based Classification</a></li>
+  <li><a href="#questions-for-parts-one-and-two" id="toc-questions-for-parts-one-and-two" class="nav-link" data-scroll-target="#questions-for-parts-one-and-two">Questions for parts one and two:</a></li>
   </ul></li>
-  <li><a href="#part-two-accuracy-assessment" id="toc-part-two-accuracy-assessment" class="nav-link" data-scroll-target="#part-two-accuracy-assessment">Part Two: Accuracy Assessment</a>
+  <li><a href="#part-three" id="toc-part-three" class="nav-link" data-scroll-target="#part-three">Part Three</a>
   <ul class="collapse">
-  <li><a href="#questions-for-part-two" id="toc-questions-for-part-two" class="nav-link" data-scroll-target="#questions-for-part-two">Questions for Part Two:</a></li>
-  </ul></li>
-  <li><a href="#part-three-change-detection" id="toc-part-three-change-detection" class="nav-link" data-scroll-target="#part-three-change-detection">Part Three: Change Detection</a>
-  <ul class="collapse">
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion:</a></li>
+  <li><a href="#change-detection" id="toc-change-detection" class="nav-link" data-scroll-target="#change-detection">Change Detection</a></li>
+  <li><a href="#questions-for-part-three" id="toc-questions-for-part-three" class="nav-link" data-scroll-target="#questions-for-part-three">Questions for part three:</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 21, 2025</p>
+      <p class="date-modified">February 2, 2025</p>
     </div>
   </div>
     
@@ -231,197 +231,379 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="image-classification-lab" class="level1">
-<h1>Image Classification Lab</h1>
-<section id="software" class="level2">
-<h2 class="anchored" data-anchor-id="software">Software:</h2>
-<p>If you have been using <strong>ArcGIS</strong>, it is recommended to use <strong>QGIS</strong> for this lab.</p>
-<hr>
-</section>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview:</h2>
-<p>You are provided with two <strong>Landsat images</strong> of the Portland metro and surrounding areas from two different image dates. The images are located in the shared folder of the class <strong>R drive</strong>. Your task is to classify pixels in the <strong>Landsat 8 image</strong> to match a classification schema of interest (e.g., land cover or forest type). You will use <strong>Google Earth</strong> for ground truth or “training” data in the classification workflow.</p>
-<p>This lab is divided into three parts: 1. <strong>Unsupervised and Supervised Classification</strong>: Implement two different classification techniques and examine their advantages and disadvantages. 2. <strong>Accuracy Assessment</strong>: Compare your classification output to your training data to assess accuracy. 3. <strong>Change Detection Analysis</strong>: Apply the steps to the second Landsat image and assess landscape changes both qualitatively and quantitatively.</p>
-<hr>
-</section>
-<section id="part-one-classification" class="level2">
-<h2 class="anchored" data-anchor-id="part-one-classification">Part One: Classification</h2>
-<section id="step-1-create-a-classification-schema" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-create-a-classification-schema">Step 1: Create a Classification Schema</h3>
-<ul>
-<li><p><strong>What would you like to investigate about the landscape?</strong></p></li>
-<li><p><strong>Create a classification key</strong> with class, value, and color as columns for reference.</p>
-<p><em>Insert your classification key here (screenshot or table).</em></p></li>
-</ul>
-<hr>
-</section>
-<section id="unsupervised-pixel-based-classification" class="level3">
-<h3 class="anchored" data-anchor-id="unsupervised-pixel-based-classification">Unsupervised Pixel-Based Classification</h3>
+<section id="software" class="level1">
+<h1>Software:</h1>
+<p>We will use QGIS for this lab and will install the SAGA NextGen plugin and Dzetsaka.</p>
 <ol type="1">
-<li><p><strong>Load Bands into QGIS</strong>:</p>
-<ul>
-<li>Load all bands into <strong>QGIS</strong>.</li>
-<li>Build a <strong>true-color composite</strong> or create a <strong>virtual raster</strong> for reference.</li>
-<li>Set the resolution to the highest possible and place input files into separate bands.</li>
-</ul>
-<p><em>Insert screenshot of your true-color composite in QGIS here.</em></p></li>
-<li><p><strong>Create a Region of Interest (ROI)</strong>:</p>
-<ul>
-<li>Zoom in to a specific region of interest.</li>
-<li>Create a new shapefile layer:
-<ul>
-<li>Go to <strong>Layer → Create Layer → New Shapefile Layer</strong>. Select polygon geometry and specify a file name.</li>
-</ul></li>
-<li>Add features to your shapefile by selecting the pencil icon and drawing a box around your area of interest.</li>
-<li>Right-click to stop editing, enter <code>1</code> for the ID, and save edits.</li>
-</ul>
-<p><em>Insert screenshot of your shapefile and drawn ROI here.</em></p></li>
-<li><p><strong>Clip Raster by Mask Layer</strong>:</p>
-<ul>
-<li>Search for <strong>Clip Raster by Mask Layer</strong> in the processing toolbox.</li>
-<li>Input layers: Raw band images (red, green, blue).</li>
-<li>Mask layer: The shapefile you just created.</li>
-<li>Run the tool once for each input layer.</li>
-</ul>
-<p><em>Insert screenshot of clipped raster layers here.</em></p></li>
-<li><p><strong>Run K-Means Clustering</strong>:</p>
-<ul>
-<li>Search for <strong>K-means clustering for grids</strong> in the processing toolbox (equivalent to <strong>Iso Cluster Unsupervised Classification</strong> in ArcGIS).</li>
-<li>Input “grids”: The clipped/masked bands (red, green, blue).</li>
-<li>Set the number of clusters to match the classes in your key.</li>
-<li>Define the number of iterations (consider experimenting with different values).</li>
-<li>Press <strong>Run</strong> and export the resulting layer as a <strong>TIF</strong>.</li>
-</ul>
-<p><em>Insert screenshot of the clustering process and output layer here.</em></p></li>
-<li><p><strong>Adjust Symbology and Validate</strong>:</p>
-<ul>
-<li>Change the symbology of the output layer to <strong>paletted/unique values</strong> and use a <strong>random color ramp</strong>.</li>
-<li>Validate classification by comparing with your true color composite. Toggle the layers to inspect.</li>
-</ul>
-<p><em>Insert screenshot of output with color ramp and validation process here.</em></p></li>
+<li>Inside QGIS select the plugins tab at the top.</li>
+<li>Manage and install plugins</li>
+<li>Make sure you are on the “All” tab and search for SAGA. It is a blue logo: “Processing Saga NextGen Provider. Select it and install.</li>
+<li>Now search for dzetsaka and install</li>
+<li>You can close the pop-up</li>
 </ol>
+<p>Please let me know if you have trouble getting these tools installed!</p>
+<p>Be sure to start a QGIS project and save it. You will not to install or load the tool your next time working on the machine. You will need to install it if you work on a new computer next time.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li>You will download <strong>Landsat imagery</strong> on EarthExplorer of the Mt St Helens area, before and after the 1980 eruption to answer a brief research question of something that interests you (for example: how long did it take for vegetation recovery after the eruption?). The research question will guide the image dates and number of images you download. It’s been almost 45 years, so using Landsat you should be able and ask a pretty interesting question about this. If visible bands are not available you can download any raw bands that are available.</li>
+<li>You will work image by image, and your task is to classify pixels in the image to match a classification schema of interest (i.e., landcover or forest type).</li>
+<li>You will be using your image interpretation skills to generate training data</li>
+</ul>
+<p>At this point you can navigate to EarthExplorer, download your Landsat images and then read on.</p>
 <hr>
+<p>This lab will be divided into three parts.</p>
+<p><strong>Part one:</strong> Unsupervised classification.</p>
+<ul>
+<li><p>The tool you are going to run in QGIS will basically group pixels that have similar spectral characteristics to classes or clusters <em>without</em> any additional information from the user (you).</p></li>
+<li><p><strong><em>For example:</em></strong> pixels that have really high NIR values could be grouped as one cluster because maybe these pixels have vegetation in them.</p></li>
+</ul>
+<p><strong>Part two:</strong> Supervised classification.</p>
+<ul>
+<li>The tool will take additional information (training data) and <em>then</em> it will look at the spectral characteristics of each pixel and group into classes accordingly. You are going to be the source of this training data (more on this below).</li>
+</ul>
+<p><strong>Part three:</strong> Accuracy assessment and change detection</p>
+<ul>
+<li>You will run the <strong><em>supervised classification</em></strong> algorithms for your remaining image dates.</li>
+</ul>
+</section>
+<section id="part-one" class="level2">
+<h2 class="anchored" data-anchor-id="part-one">Part One</h2>
+<p>First, consider: what is it you would like to investigate about the landscape? How will you set up your classification schema? Create a classification key with class, value, and color as columns for reference. You have to freedom over what this looks like and it is purely for reference. Use excel, notepad, or word create one. Here is mine:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Value</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Healthy Forest</td>
+<td>1</td>
+<td>Green</td>
+</tr>
+<tr class="even">
+<td>Urban</td>
+<td>2</td>
+<td>Gray</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>3</td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td>Grass</td>
+<td>4</td>
+<td>Yellow</td>
+</tr>
+<tr class="odd">
+<td>Unhealthy Forest</td>
+<td>5</td>
+<td>Brown</td>
+</tr>
+</tbody>
+</table>
+<section id="unsupervised-pixel-based-classification" class="level3">
+<h3 class="anchored" data-anchor-id="unsupervised-pixel-based-classification">Unsupervised Pixel Based Classification</h3>
+<ol type="1">
+<li><p><strong>Prepare the Data:</strong></p>
+<ul>
+<li>Load layers into QGIS. Just use one image date to start</li>
+<li>Create a true color composite or false color composite for reference using the Build Virtual Raster Tool.
+<ul>
+<li>Raster tab (top of the screen)</li>
+<li>Miscellaneous</li>
+<li>Build Virtual Raster</li>
+<li>Select input layers</li>
+<li>Set Resolution to highest</li>
+<li>Place each input file in separate band</li>
+<li>RUN</li>
+</ul></li>
+<li>Remember that the virtual output you created does not automatically save.
+<ul>
+<li>Right-click the virtual layer</li>
+<li>Export</li>
+<li>Save in the output data as a tif</li>
+<li>Be specific with how you name (i.e., FCC_1979.tif)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Define Area of Interest:</strong></p>
+<ul>
+<li>Create a polygon shapefile around Mt. St.&nbsp;Helens to use as a clipping mask.</li>
+<li>Layer tab (top of the screen)</li>
+<li>Create layer</li>
+<li>New shapefile layer</li>
+<li>Filename is up to you</li>
+<li>Geometry type: polygon</li>
+<li>RUN</li>
+<li>Right-click the shapefile in your layers tab</li>
+<li>Select “Toggle editing”</li>
+<li>Add polygon (see screenshot) <strong>then</strong> Click somewhere on the screen to begin drawing and complete the polygon by right-clicking</li>
+<li>Right-click and select toggle editing again to turn it off</li>
+</ul>
+<p><img src="edit-SHP-ss.jpg" class="img-fluid" width="578"></p></li>
+<li><p><strong>Clip Raster by Mask:</strong></p>
+<ul>
+<li>Clip your images to the shapefile. The shapefile will act as a cookie cutter.</li>
+<li>Search the processing toolbox for “Clip raster by mask layer”. If you don’t see the toolbox on the right side of QGIS press CTRL + ALT + T.</li>
+<li><strong>Input layer:</strong> Landsat raw band raster (you will have to do this for each raw band raster instead of composites because the classification tool will not work for a composite image).</li>
+<li><strong>Mask layer:</strong> The shapefile you created</li>
+<li><strong>Clipped mask:</strong> Save this in your output data as a TIF (i.e., Landsat_1979_B5_CLIPPED.tif)</li>
+<li><strong>RUN</strong></li>
+<li>Rinse and repeat for the other bands</li>
+</ul></li>
+<li><p><strong>K-Means Clustering:</strong></p>
+<ul>
+<li><p>Search for <strong>K-means clustering for grids</strong> in your toolbox window</p></li>
+<li><p>Input the clipped rasters from above. Set the <strong>Number of Clusters</strong> based on your classification key (for example, 5 clusters for 5 land cover classes).</p></li>
+<li><p>Adjust the <strong>Iterations</strong> to control how many times the algorithm tries to classify pixels (usually around 10-20 iterations). More on the <a href="https://saga-gis.sourceforge.io/saga_tool_doc/2.2.4/imagery_classification_1.html">tool</a></p></li>
+<li><p>Run the tool. See the parameters I used:</p>
+<p><img src="unsupervised_params.jpg" class="img-fluid" width="377"></p></li>
+</ul></li>
+<li><p><strong>Classify the Output:</strong></p>
+<ul>
+<li><p>After running the tool, the output will be a classified raster. #WOW</p>
+<p><img src="unsupervised_bw.jpg" class="img-fluid" width="643"></p></li>
+<li><p>Do a quick export of the clusters layer in your layers pane and save it as a tif. It won’t save if you reload QGIS because it is just a temporary file at the moment.</p></li>
+<li><p>Once you save it, load it into your layers and change the symbology to apply a random color palette or directly adjust the colors according to your KEY!</p>
+<ul>
+<li>Right-click the output clusters layer</li>
+<li>Properties</li>
+<li>Symbology</li>
+<li>Change the render type to paletted/ unique values</li>
+<li>Press classify</li>
+<li>Press apply</li>
+<li>Change the colors to match your key (read below)</li>
+</ul></li>
+<li><p>Now, use a true color or false color composite as a reference (toggle your layer on and off) to visually inspect the output and match it with the classification key. Take a screenshot of your classified output after setting the colors as close to your key as possible. Do this to the best of your ability.</p></li>
+</ul></li>
+</ol>
+<p>See if your output looks any better than this but remember this was unsupervised:</p>
+<p><img src="unsupervised_color.jpg" class="img-fluid" width="621"></p>
+<hr>
+</section>
+<section id="part-two" class="level3">
+<h3 class="anchored" data-anchor-id="part-two">Part Two</h3>
 </section>
 <section id="supervised-pixel-based-classification" class="level3">
-<h3 class="anchored" data-anchor-id="supervised-pixel-based-classification">Supervised Pixel-Based Classification</h3>
-<ol type="1">
-<li><p><strong>Obtain Training Data</strong>:</p>
+<h3 class="anchored" data-anchor-id="supervised-pixel-based-classification">Supervised Pixel Based Classification</h3>
 <ul>
-<li>You can generate <strong>random points</strong> in the layer bounds.
+<li><p><strong>Collect Training Data (take your pick of option 1 or option 2):</strong></p>
 <ul>
-<li>Input layer: The bounding box shapefile from step 2.</li>
-<li>The number of points should be at least <strong>10-15 points per class</strong>.</li>
+<li><strong>Option 1:</strong> You can search the toolbox for a tool called random points in extent
+<ul>
+<li>10 points minimum per class (so 50 points if you are going for 5 classes)</li>
+<li>input extent: calculate from layer and use the shapefile from step 2 in the unsupervised classification section.</li>
+<li>You can set a mimimum distance in between points. This is up to you.</li>
+<li>Right-click the points layer and select attribute table</li>
+<li>You will need a value column and you will need to adjust the value of each point in your table depending on where it lies within a true or false color image. For this you can reference your <strong>key!</strong> You should also add a class column that will be the label (i.e., forest, grass, urban).</li>
+</ul></li>
+<li><strong>Option 2:</strong> You can create a new points shapefile and manually place your points
+<ul>
+<li><p>recall step 2 of the unsupervised classification section except geometry type will be points</p></li>
+<li><p><strong>OK</strong></p></li>
+<li><p>Change the points symbology so it is a bright color and then start adding points</p></li>
+<li><p>Now toggle editing and add points using your true or false color as a reference</p></li>
+<li><p>Each point you add you have the option to set the value or id (for this you will refer to your key and assess what you see visually in true or false color). Essentially this is just a number you assign it 1-5 based on what class it falls in when you look at an image.</p></li>
+<li><p>Right-click the layer after your save your changes and turn off editing and select attribute table to see how this looks. Feel free to add more columns to match your key. You should also add a class column that will be the label (i.e., forest, grass, urban).</p>
+<p><img src="train_data_attr.jpg" class="img-fluid"></p></li>
+</ul></li>
+<li>Considerations:
+<ul>
+<li>The first option is random so you might get some points that fall within vegetation pixels and way more that fall within water pixels so there is a bias</li>
+<li>The second option is tedious but you have full control over placement. Shoot for at least 10 points per class, so 50 points in total if you are trying to classify the image into 5 distinct classes.</li>
 </ul></li>
 </ul>
-<p><em>Insert screenshot of random points or training points here.</em></p></li>
-<li><p><strong>Label Points in Google Earth</strong>:</p>
+<p>Here is how they might be dispersed:</p>
+<p><img src="train_pts_overlay.jpg" class="img-fluid"></p></li>
+<li><p><strong>Install a dependency for dzetsaka</strong></p>
 <ul>
-<li>Open <strong>Google Earth</strong> and import your <strong>KML file</strong> (if using random points).</li>
-<li>Label your points using your classification key based on land feature interpretation.</li>
-<li>If the random points are not well-placed, manually adjust them in Google Earth.</li>
-</ul>
-<p><em>Insert screenshot of labeled points in Google Earth here.</em></p></li>
-<li><p><strong>Export Training Data</strong>:</p>
-<ul>
-<li>Right-click the <strong>KML layer</strong> in Google Earth and export it.</li>
-<li>Import the <strong>KML file</strong> into <strong>QGIS</strong> and export it as a shapefile. Make sure the file name is clear (e.g., <code>train_points_10classes_10obs.shp</code>).</li>
-</ul>
-<p><em>Insert screenshot of shapefile with training points here.</em></p></li>
-<li><p><strong>Add a Value Column</strong>:</p>
-<ul>
-<li>Open the attribute table of your training points shapefile.</li>
-<li>Add a <strong>new field</strong> to assign numerical values to your classes.</li>
-</ul>
-<p><em>Insert screenshot of the attribute table and new field here.</em></p></li>
-<li><p><strong>Install dzetsaka Plugin</strong>:</p>
-<ul>
-<li><p>Install the <strong>dzetsaka classification tool</strong> by going to <strong>Plugins → Manage and Install Plugins</strong>. Search for <strong>dzetsaka</strong> and install it.</p></li>
-<li><p>In the <strong>Python Console</strong>, type:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pip</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pip.main([<span class="st">'install'</span>, <span class="st">'scikit-learn'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul>
-<p><em>Insert screenshot of dzetsaka plugin installation here.</em></p></li>
-<li><p><strong>Train Classifier</strong>:</p>
-<ul>
-<li>Under the dzetsaka classification tool, select <strong>Train Algorithm</strong>.</li>
-<li>Input raster: The raster you want the model to learn (e.g., true-color composite).</li>
-<li>Input layer: Your training points shapefile. Set the field to the column with numerical value assignments.</li>
-<li>Select the <strong>K-nearest neighbors</strong> algorithm (start with this one).</li>
-<li>Set the pixel percentage for validation to <strong>20%</strong> and specify the output model path.</li>
-</ul>
-<p><em>Insert screenshot of classifier training setup here.</em></p></li>
-<li><p><strong>Predict Classifications</strong>:</p>
-<ul>
-<li>After training, select <strong>Predict Model</strong> under the dzetsaka tool.</li>
-<li>Input raster: The same raster you trained the model with.</li>
-<li>Specify the output raster file name and ensure it’s saved as a <strong>.tif</strong> file.</li>
-</ul>
-<p><em>Insert screenshot of classification output prediction here.</em></p></li>
-</ol>
-<hr>
-</section>
-<section id="questions-for-part-one" class="level3">
-<h3 class="anchored" data-anchor-id="questions-for-part-one">Questions for Part One:</h3>
-<ol type="1">
-<li><p><strong>What are you trying to classify?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>Which technique performed better and why?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>What is the k-means clustering algorithm doing? And the K-nearest neighbors algorithm?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>What biases could be introduced in the training process? How was the training data distributed spatially? How many observations per class?</strong> <em>Insert your response here.</em></p></li>
-</ol>
-<hr>
-</section>
-</section>
-<section id="part-two-accuracy-assessment" class="level2">
-<h2 class="anchored" data-anchor-id="part-two-accuracy-assessment">Part Two: Accuracy Assessment</h2>
-<ol type="1">
-<li><p><strong>Generate a Confusion Matrix</strong>:</p>
-<ul>
-<li>To assess accuracy, you need to generate a <strong>confusion matrix</strong>. You may need to install the <strong>Orfeo ToolBox</strong> plugin for this.</li>
-<li>Install it by downloading from <a href="https://www.orfeo-toolbox.org/download/">Orfeo ToolBox</a> and placing it in the <code>C:/Program Files/QGIS</code> directory.</li>
-<li>Search for <strong>ComputeConfusionMatrix</strong> and set the input image to your classified image, with ground truth set to your training points.</li>
-</ul>
-<p><em>Insert screenshot of confusion matrix for both supervised and unsupervised classification here.</em></p></li>
-<li><p><strong>Report Accuracy Metrics</strong>:</p>
-<ul>
-<li>Calculate and report:
-<ul>
-<li><strong>Overall Accuracy</strong></li>
-<li><strong>Producers Accuracy</strong></li>
-<li><strong>Users Accuracy</strong></li>
+<li>There is a python library we need in order to run classification using dzetsaka</li>
+<li>Select the plugins tab and select python console</li>
+<li>At the bottom of your screen type this and press enter</li>
 </ul></li>
 </ul>
-<p><em>Insert your confusion matrix results and interpretation here.</em></p></li>
-</ol>
+<div id="d85a177c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now type this and press enter</p>
+<div id="00d106ce" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip.main([<span class="st">'install'</span>, <span class="st">'scikit-learn'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Collecting scikit-learn
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  Downloading scikit_learn-1.6.1-cp313-cp313-macosx_12_0_arm64.whl.metadata (31 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Collecting numpy&gt;=1.19.5 (from scikit-learn)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  Downloading numpy-2.2.2-cp313-cp313-macosx_14_0_arm64.whl.metadata (62 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Collecting scipy&gt;=1.6.0 (from scikit-learn)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  Downloading scipy-1.15.1-cp313-cp313-macosx_14_0_arm64.whl.metadata (61 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Collecting joblib&gt;=1.2.0 (from scikit-learn)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  Downloading joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Collecting threadpoolctl&gt;=3.1.0 (from scikit-learn)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">  Downloading threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Downloading scikit_learn-1.6.1-cp313-cp313-macosx_12_0_arm64.whl (11.1 MB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"50e7fcc3acf147629b8363d65e387580","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Downloading numpy-2.2.2-cp313-cp313-macosx_14_0_arm64.whl (5.1 MB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"3facf0c8508047ee8e28e567a472a537","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Downloading scipy-1.15.1-cp313-cp313-macosx_14_0_arm64.whl (24.8 MB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"ce259f5f9a854f8f84f3d515dc923799","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Installing collected packages: threadpoolctl, numpy, joblib, scipy, scikit-learn
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Successfully installed joblib-1.4.2 numpy-2.2.2 scikit-learn-1.6.1 scipy-1.15.1 threadpoolctl-3.5.0
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold">[</span><span style="color: #000080; text-decoration-color: #000080; background-color: #ffffff">notice</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff; font-weight: bold">]</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> A new release of pip is available: </span><span style="color: #800000; text-decoration-color: #800000; background-color: #ffffff">24.3.1</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> -&gt; </span><span style="color: #008000; text-decoration-color: #008000; background-color: #ffffff">25.0</span>
+<span style="font-weight: bold">[</span><span style="color: #000080; text-decoration-color: #000080; background-color: #ffffff">notice</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff; font-weight: bold">]</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> To update, run: </span><span style="color: #008000; text-decoration-color: #008000; background-color: #ffffff">pip install --upgrade pip</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>0</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Train a model:</strong>
+<ul>
+<li><p>In the processing toolbox select dzetsaka</p></li>
+<li><p>Classification tool</p></li>
+<li><p>Train algorithm. Here are the parameters used (you can you a composite image with this tool):</p>
+<p><img src="dzetsaka_train_params.jpg" class="img-fluid"></p></li>
+</ul></li>
+<li><strong>Predictions from a trained model:</strong>
+<ul>
+<li>Once you have saved your models for each band you are ready to make predictions (I saved three models for bands 6, 5, and 4 from a Landsat 1 image)</li>
+<li>Open the processing toolbox –&gt; dzetsaka</li>
+<li>Classification tool</li>
+<li>Predict model</li>
+<li>Input raster: Landsat B4 clipped to start</li>
+<li>Model learned is my B4 model from the above step</li>
+<li>Output raster is saved in output data folder as a tif</li>
+<li>Confidence raster is saved in output data folder as a tif with a unique name</li>
+<li>RUN</li>
+<li>Change layer symbology to match your key</li>
+</ul></li>
+</ul>
+<p><img src="model_prediction_params.jpg" class="img-fluid"></p>
 <hr>
-<section id="questions-for-part-two" class="level3">
-<h3 class="anchored" data-anchor-id="questions-for-part-two">Questions for Part Two:</h3>
+</section>
+<section id="questions-for-parts-one-and-two" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-parts-one-and-two">Questions for parts one and two:</h3>
 <ol type="1">
-<li><p><strong>What were your accuracy results? What does each statistic tell you?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>Which classification technique performed better?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>What do you think was the greatest flaw in your classification workflow?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>Which classes are underclassified and overclassified?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>Are there consistencies in accuracy between supervised and unsupervised methods?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>How might the accuracy of your classification be improved?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>What type of classification technique are supervised and unsupervised methods?</strong> <em>Insert your response here.</em></p></li>
-<li><p><strong>What other types of classification techniques are there?</strong> <em>Insert your response here.</em></p></li>
+<li>What is your research question?</li>
+<li>Did the unsupervised or supervised classification perform better and what makes you say so?</li>
+<li>What is the K-Means clustering algorithm doing? Check out google or the QGIS documentation for the tool</li>
+<li>What is the K nearest neighbors algorithm doing?</li>
+<li>What kinds of biases could be introduced in the training process?</li>
+<li>How was your training data distributed spatially? Did you favor a particular area of the image?</li>
+<li>Around how many observations did you have for each class?</li>
+<li>What input raster bands did you use when predicting?</li>
+<li>Insert screenshots of the unsupervised result, and your supervised results with brief figure captions.</li>
 </ol>
-<hr>
 </section>
 </section>
-<section id="part-three-change-detection" class="level2">
-<h2 class="anchored" data-anchor-id="part-three-change-detection">Part Three: Change Detection</h2>
-<ul>
-<li><p><strong>Perform Change Detection</strong>:<br>
-Use the same process to perform <strong>post-classification change detection</strong> with the second Landsat image. Look for changes in land cover such as <strong>forest to non-forest</strong> or <strong>grassland to urban</strong>.</p></li>
-<li><p>Investigate changes in terms of <strong>percent area</strong> or <strong>proportion of the landscape</strong>. Quantify the change in <strong>m² or hectares</strong> and assess the implications.</p>
-<p><em>Insert screenshot of change detection output here.</em></p></li>
-</ul>
-<hr>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion:</h3>
-<ul>
-<li>Reflect on the findings from each part of the lab, the effectiveness of the classification techniques, and the insights gained from the change detection analysis.</li>
-</ul>
+<section id="part-three" class="level2">
+<h2 class="anchored" data-anchor-id="part-three">Part Three</h2>
+<section id="change-detection" class="level3">
+<h3 class="anchored" data-anchor-id="change-detection">Change Detection</h3>
+<p>If you think back to lab 2; you performed change detection using R and indexed images. For example, NDVI change between 2019 to 2024.</p>
+<p>Using your additional image dates you will run the supervised classification tool again, using the same training data.</p>
+<p>You will perform post classification change detection, and this can be done a few different ways. For example we can obtain the count of pixels in each class and multiply this by pixel area to see how the surface area of a class changes over time. Or it could be framed in terms of class change (i.e., healthy forest to unhealthy forest). Just using your supervised classification maps for each image date you will toggle through them and write 2-3 sentences about the change you see visually.</p>
+<p>Now you can right-click each of your output supervised layers and select properties then histogram and compute histogram. Frequency (on the y axis is the pixel count and Pixel value is the class it belongs to). Take the frequency of the pixels in each class divided by the total to get proportion of the image that belongs to each class (this can then be multiplied by pixel area). Or you might find other ways to get pixel counts.</p>
+<p>This last part will be up to you to create additional supervised images (however many help your research question), and then create some type of summary of the pixels in each class and how this has changed over time. Feel free to use google to find ways to get pixel counts of a raster or create attribute tables for a raster. Please submit some type of visualization of the change. Whether it is a graph or a map, don’t overburden yourself but try to do a little research about how people typically do this in QGIS or excel.</p>
+</section>
+<section id="questions-for-part-three" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-part-three">Questions for part three:</h3>
+<ol type="1">
+<li>What did you learn?</li>
+<li>What are the limitations?</li>
+<li>How would you do this differently next time?</li>
+</ol>
 
 
 </section>
@@ -429,6 +611,9 @@ Use the same process to perform <strong>post-classification change detection</st
 </section>
 
 </main> <!-- /main -->
+<script type="application/vnd.jupyter.widget-state+json">
+{"state":{"3facf0c8508047ee8e28e567a472a537":{"model_module":"@jupyter-widgets/output","model_module_version":"1.0.0","model_name":"OutputModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/output","_model_module_version":"1.0.0","_model_name":"OutputModel","_view_count":null,"_view_module":"@jupyter-widgets/output","_view_module_version":"1.0.0","_view_name":"OutputView","layout":"IPY_MODEL_e3a31b32de2a459ca98171ecc34f309a","msg_id":"","outputs":[{"data":{"text/html":"<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\">   <span style=\"color: #f92672; text-decoration-color: #f92672\">━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸</span><span style=\"color: #3a3a3a; text-decoration-color: #3a3a3a\">━━━━━━━━━━━</span> <span style=\"color: #008000; text-decoration-color: #008000\">3.7/5.1 MB</span> <span style=\"color: #800000; text-decoration-color: #800000\">6.3 MB/s</span> eta <span style=\"color: #008080; text-decoration-color: #008080\">0:00:01</span>\n</pre>\n","text/plain":"   \u001b[38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[38;2;249;38;114m╸\u001b[0m\u001b[38;5;237m━━━━━━━━━━━\u001b[0m \u001b[32m3.7/5.1 MB\u001b[0m \u001b[31m6.3 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n"},"metadata":{},"output_type":"display_data"}],"tabbable":null,"tooltip":null}},"50e7fcc3acf147629b8363d65e387580":{"model_module":"@jupyter-widgets/output","model_module_version":"1.0.0","model_name":"OutputModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/output","_model_module_version":"1.0.0","_model_name":"OutputModel","_view_count":null,"_view_module":"@jupyter-widgets/output","_view_module_version":"1.0.0","_view_name":"OutputView","layout":"IPY_MODEL_d81d1cb6d22c4c858f57ee5e2aebd2f4","msg_id":"","outputs":[{"data":{"text/html":"<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\">   <span style=\"color: #f92672; text-decoration-color: #f92672\">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸</span> <span style=\"color: #008000; text-decoration-color: #008000\">11.0/11.1 MB</span> <span style=\"color: #800000; text-decoration-color: #800000\">3.7 MB/s</span> eta <span style=\"color: #008080; text-decoration-color: #008080\">0:00:01</span>\n</pre>\n","text/plain":"   \u001b[38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[38;2;249;38;114m╸\u001b[0m \u001b[32m11.0/11.1 MB\u001b[0m \u001b[31m3.7 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n"},"metadata":{},"output_type":"display_data"}],"tabbable":null,"tooltip":null}},"9ca8d534700443018fd281429cfa8ce2":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"ce259f5f9a854f8f84f3d515dc923799":{"model_module":"@jupyter-widgets/output","model_module_version":"1.0.0","model_name":"OutputModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/output","_model_module_version":"1.0.0","_model_name":"OutputModel","_view_count":null,"_view_module":"@jupyter-widgets/output","_view_module_version":"1.0.0","_view_name":"OutputView","layout":"IPY_MODEL_9ca8d534700443018fd281429cfa8ce2","msg_id":"","outputs":[{"data":{"text/html":"<pre style=\"white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace\">   <span style=\"color: #f92672; text-decoration-color: #f92672\">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span><span style=\"color: #3a3a3a; text-decoration-color: #3a3a3a\">╺━</span> <span style=\"color: #008000; text-decoration-color: #008000\">23.9/24.8 MB</span> <span style=\"color: #800000; text-decoration-color: #800000\">6.9 MB/s</span> eta <span style=\"color: #008080; text-decoration-color: #008080\">0:00:01</span>\n</pre>\n","text/plain":"   \u001b[38;2;249;38;114m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[38;5;237m╺\u001b[0m\u001b[38;5;237m━\u001b[0m \u001b[32m23.9/24.8 MB\u001b[0m \u001b[31m6.9 MB/s\u001b[0m eta \u001b[36m0:00:01\u001b[0m\n"},"metadata":{},"output_type":"display_data"}],"tabbable":null,"tooltip":null}},"d81d1cb6d22c4c858f57ee5e2aebd2f4":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}},"e3a31b32de2a459ca98171ecc34f309a":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":null}}},"version_major":2,"version_minor":0}
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
