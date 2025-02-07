@@ -1,0 +1,17 @@
+/* styles.css */
+
+/* Change the background color of the top ribbon/navbar to an off-white color */
+.navbar {
+  background-color: #f5f5f5 !important;  /* Off-white color */
+  border-bottom: 1px solid #e0e0e0;  /* Optional: soft border at the bottom */
+}
+
+/* Optional: Change the color of the links in the navbar to make them more readable */
+.navbar a {
+  color: #333333 !important;  /* Dark text color for links */
+}
+
+.navbar a:hover {
+  color: #666666 !important;  /* Lighter color on hover */
+}
+

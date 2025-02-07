@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Wesley Rancher">
+<meta name="dcterms.date" content="2024-12-19">
+
+<title>Lab three instructions – Wesley Rancher</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a1aec47332d55c002fe6faa7b7735926.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Wesley Rancher</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../code.html"> 
+<span class="menu-text">code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html"> 
+<span class="menu-text">teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../portfolio.html"> 
+<span class="menu-text">portfolio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.pdf"> 
+<span class="menu-text">cv</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#software" id="toc-software" class="nav-link active" data-scroll-target="#software">Software:</a>
+  <ul class="collapse">
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-one" id="toc-part-one" class="nav-link" data-scroll-target="#part-one">Part One</a>
+  <ul class="collapse">
+  <li><a href="#unsupervised-pixel-based-classification" id="toc-unsupervised-pixel-based-classification" class="nav-link" data-scroll-target="#unsupervised-pixel-based-classification">Unsupervised Pixel Based Classification</a></li>
+  </ul></li>
+  <li><a href="#part-two" id="toc-part-two" class="nav-link" data-scroll-target="#part-two">Part Two</a>
+  <ul class="collapse">
+  <li><a href="#supervised-pixel-based-classification" id="toc-supervised-pixel-based-classification" class="nav-link" data-scroll-target="#supervised-pixel-based-classification">Supervised Pixel Based Classification</a></li>
+  <li><a href="#questions-for-parts-one-and-two" id="toc-questions-for-parts-one-and-two" class="nav-link" data-scroll-target="#questions-for-parts-one-and-two">Questions for parts one and two:</a></li>
+  </ul></li>
+  <li><a href="#part-three" id="toc-part-three" class="nav-link" data-scroll-target="#part-three">Part Three</a>
+  <ul class="collapse">
+  <li><a href="#change-detection" id="toc-change-detection" class="nav-link" data-scroll-target="#change-detection">Change Detection</a></li>
+  <li><a href="#questions-for-part-three" id="toc-questions-for-part-three" class="nav-link" data-scroll-target="#questions-for-part-three">Questions for part three:</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab three instructions</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">QGIS</div>
+    <div class="quarto-category">classification</div>
+    <div class="quarto-category">k-means-clustering</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wesley Rancher </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 19, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 4, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="software" class="level1">
+<h1>Software:</h1>
+<p>We will use QGIS for this lab and will install the SAGA NextGen plugin and Dzetsaka.</p>
+<ol type="1">
+<li>Inside QGIS select the plugins tab at the top.</li>
+<li>Manage and install plugins</li>
+<li>Make sure you are on the “All” tab and search for SAGA. It is a blue logo: “Processing Saga NextGen Provider. Select it and install.</li>
+<li>Now search for dzetsaka and install</li>
+<li>You can close the pop-up</li>
+</ol>
+<p>Please let me know if you have trouble getting these tools installed!</p>
+<p>Be sure to start a QGIS project and save it. You will not need to install or load the tool your next time working on the machine. You will need to install it if you work on a new computer next time.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<ul>
+<li>You will download <strong>Landsat imagery</strong> on EarthExplorer of the Mt St Helens area, before and after the 1980 eruption to answer a brief research question of something that interests you (for example: how long did it take for vegetation recovery after the eruption?). The research question will guide the image dates and number of images you download. It’s been almost 45 years, so using Landsat you should be able and ask a pretty interesting question about this. If visible bands are not available you can download any raw bands that are available.</li>
+<li>You will work image by image, and your task is to classify pixels in the image to match a classification schema of interest (i.e., landcover or forest type).</li>
+<li>You will be using your image interpretation skills to generate training data</li>
+</ul>
+<p>At this point you can navigate to EarthExplorer, download your Landsat images and then read on.</p>
+<hr>
+<p>This lab will be divided into three parts.</p>
+<p><strong>Part one:</strong> Unsupervised classification.</p>
+<ul>
+<li><p>The tool you are going to run in QGIS will basically group pixels that have similar spectral characteristics to classes or clusters <em>without</em> any additional information from the user (you).</p></li>
+<li><p><strong><em>For example:</em></strong> pixels that have really high NIR values could be grouped as one cluster because maybe these pixels have vegetation in them.</p></li>
+</ul>
+<p><strong>Part two:</strong> Supervised classification.</p>
+<ul>
+<li>The tool will take additional information (training data) and <em>then</em> it will look at the spectral characteristics of each pixel and group into classes accordingly. You are going to be the source of this training data (more on this below).</li>
+</ul>
+<p><strong>Part three:</strong> Change detection</p>
+<ul>
+<li>You will run the <strong><em>supervised classification</em></strong> algorithms for your remaining image dates.</li>
+</ul>
+</section>
+<section id="part-one" class="level2">
+<h2 class="anchored" data-anchor-id="part-one">Part One</h2>
+<p>First, consider: what is it you would like to investigate about the landscape? How will you set up your classification schema? Create a classification key with class, value, and color as columns for reference. You have to freedom over what this looks like and it is purely for reference. Use excel, notepad, or word create one. Here is mine:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Value</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Healthy Forest</td>
+<td>1</td>
+<td>Green</td>
+</tr>
+<tr class="even">
+<td>Urban</td>
+<td>2</td>
+<td>Gray</td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>3</td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td>Grass</td>
+<td>4</td>
+<td>Yellow</td>
+</tr>
+<tr class="odd">
+<td>Unhealthy Forest</td>
+<td>5</td>
+<td>Brown</td>
+</tr>
+</tbody>
+</table>
+<section id="unsupervised-pixel-based-classification" class="level3">
+<h3 class="anchored" data-anchor-id="unsupervised-pixel-based-classification">Unsupervised Pixel Based Classification</h3>
+<ol type="1">
+<li><p><strong>Prepare the Data:</strong></p>
+<ul>
+<li>Load layers into QGIS. Just use one image date to start</li>
+<li>Create a true color composite or false color composite for reference using the Build Virtual Raster Tool.
+<ul>
+<li>Raster tab (top of the screen)</li>
+<li>Miscellaneous</li>
+<li>Build Virtual Raster</li>
+<li>Select input layers</li>
+<li>Set Resolution to highest</li>
+<li>Place each input file in separate band</li>
+<li>RUN</li>
+</ul></li>
+<li>Remember that the virtual output you created does not automatically save.
+<ul>
+<li>Right-click the virtual layer</li>
+<li>Export</li>
+<li>Save in the output data as a tif</li>
+<li>Be specific with how you name (i.e., FCC_1979.tif)</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Define Area of Interest:</strong></p>
+<ul>
+<li>Create a polygon shapefile around Mt. St.&nbsp;Helens to use as a clipping mask.</li>
+<li>Layer tab (top of the screen)</li>
+<li>Create layer</li>
+<li>New shapefile layer</li>
+<li>Filename is up to you</li>
+<li>Geometry type: polygon</li>
+<li>RUN</li>
+<li>Right-click the shapefile in your layers tab</li>
+<li>Select “Toggle editing”</li>
+<li>Add polygon (see screenshot) <strong>then</strong> Click somewhere on the screen to begin drawing and complete the polygon by right-clicking</li>
+<li>Right-click and select toggle editing again to turn it off</li>
+</ul>
+<p><img src="edit-SHP-ss.jpg" class="img-fluid" width="578"></p></li>
+<li><p><strong>Clip Raster by Mask:</strong></p>
+<ul>
+<li>Clip your images to the shapefile. The shapefile will act as a cookie cutter.</li>
+<li>Search the processing toolbox for “Clip raster by mask layer”. If you don’t see the toolbox on the right side of QGIS press CTRL + ALT + T.</li>
+<li><strong>Input layer:</strong> Landsat raw band raster (you will have to do this for each raw band raster instead of composites because the classification tool will not work for a composite image).</li>
+<li><strong>Mask layer:</strong> The shapefile you created</li>
+<li><strong>Clipped mask:</strong> Save this in your output data as a TIF (i.e., Landsat_1979_B5_CLIPPED.tif)</li>
+<li><strong>RUN</strong></li>
+<li>Rinse and repeat for the other bands</li>
+</ul></li>
+<li><p><strong>K-Means Clustering:</strong></p>
+<ul>
+<li><p>Search for <strong>K-means clustering for grids</strong> in your toolbox window</p></li>
+<li><p>Input the clipped rasters from above. Set the <strong>Number of Clusters</strong> based on your classification key (for example, 5 clusters for 5 land cover classes).</p></li>
+<li><p>Adjust the <strong>Iterations</strong> to control how many times the algorithm tries to classify pixels (usually around 10-20 iterations). More on the <a href="https://saga-gis.sourceforge.io/saga_tool_doc/2.2.4/imagery_classification_1.html">tool</a></p></li>
+<li><p>Run the tool. See the parameters I used:</p>
+<p><img src="unsupervised_params.jpg" class="img-fluid" width="377"></p></li>
+</ul></li>
+<li><p><strong>Classify the Output:</strong></p>
+<ul>
+<li><p>After running the tool, the output will be a classified raster. #WOW</p>
+<p><img src="unsupervised_bw.jpg" class="img-fluid" width="643"></p></li>
+<li><p>Do a quick export of the clusters layer in your layers pane and save it as a tif. It won’t save if you reload QGIS because it is just a temporary file at the moment.</p></li>
+<li><p>Once you save it, load it into your layers and change the symbology to apply a random color palette or directly adjust the colors according to your KEY!</p>
+<ul>
+<li>Right-click the output clusters layer</li>
+<li>Properties</li>
+<li>Symbology</li>
+<li>Change the render type to paletted/ unique values</li>
+<li>Press classify</li>
+<li>Press apply</li>
+<li>Change the colors to match your key (read below)</li>
+</ul></li>
+<li><p>Now, use a true color or false color composite as a reference (toggle your layer on and off) to visually inspect the output and match it with the classification key. Take a screenshot of your classified output after setting the colors as close to your key as possible. Do this to the best of your ability.</p></li>
+</ul></li>
+</ol>
+<p>See if your output looks any better than this but remember this was unsupervised:</p>
+<p><img src="unsupervised_color.jpg" class="img-fluid" width="621"></p>
+<hr>
+</section>
+</section>
+<section id="part-two" class="level2">
+<h2 class="anchored" data-anchor-id="part-two">Part Two</h2>
+<section id="supervised-pixel-based-classification" class="level3">
+<h3 class="anchored" data-anchor-id="supervised-pixel-based-classification">Supervised Pixel Based Classification</h3>
+<ul>
+<li><p><strong>Collect Training Data (take your pick of option 1 or option 2):</strong></p>
+<ul>
+<li><strong>Option 1:</strong> You can search the toolbox for a tool called random points in extent
+<ul>
+<li>10 points minimum per class (so 50 points if you are going for 5 classes)</li>
+<li>input extent: calculate from layer and use the shapefile from step 2 in the unsupervised classification section.</li>
+<li>You can set a mimimum distance in between points. This is up to you.</li>
+<li>Right-click the points layer and select attribute table</li>
+<li>You will need a value column and you will need to adjust the value of each point in your table depending on where it lies within a true or false color image. For this you can reference your <strong>key!</strong> You should also add a class column that will be the label (i.e., forest, grass, urban).</li>
+</ul></li>
+<li><strong>Option 2:</strong> You can create a new points shapefile and manually place your points
+<ul>
+<li><p>recall step 2 of the unsupervised classification section except geometry type will be points</p></li>
+<li><p><strong>OK</strong></p></li>
+<li><p>Change the points symbology so it is a bright color and then start adding points</p></li>
+<li><p>Now toggle editing and add points using your true or false color as a reference</p></li>
+<li><p>Each point you add you have the option to set the value or id (for this you will refer to your key and assess what you see visually in true or false color). Essentially this is just a number you assign it 1-5 based on what class it falls in when you look at an image.</p></li>
+<li><p>Right-click the layer after your save your changes and turn off editing and select attribute table to see how this looks. Feel free to add more columns to match your key. You should also add a class column that will be the label (i.e., forest, grass, urban).</p>
+<p><img src="train_data_attr.jpg" class="img-fluid"></p></li>
+</ul></li>
+<li>Considerations:
+<ul>
+<li>The first option is random so you might get some points that fall within vegetation pixels and way more that fall within water pixels so there is a bias</li>
+<li>The second option is tedious but you have full control over placement. Shoot for at least 10 points per class, so 50 points in total if you are trying to classify the image into 5 distinct classes.</li>
+</ul></li>
+</ul>
+<p>Here is how they might be dispersed:</p>
+<p><img src="train_pts_overlay.jpg" class="img-fluid"></p></li>
+<li><p><strong>Install a dependency for dzetsaka</strong></p>
+<ul>
+<li>There is a python library we need in order to run classification using dzetsaka</li>
+<li>Select the plugins tab and select python console</li>
+<li>At the bottom of your screen type this and press enter</li>
+</ul></li>
+</ul>
+<div id="59e2a3b8" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now type this and press enter</p>
+<div id="7a73ca0f" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip.main([<span class="st">'install'</span>, <span class="st">'scikit-learn'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Requirement already satisfied: scikit-learn in /Users/wancher/Documents/thesis/env/lib/python3.13/site-packages (1.6.1)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Requirement already satisfied: numpy&gt;=1.19.5 in /Users/wancher/Documents/thesis/env/lib/python3.13/site-packages (from scikit-learn) (2.2.2)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Requirement already satisfied: scipy&gt;=1.6.0 in /Users/wancher/Documents/thesis/env/lib/python3.13/site-packages (from scikit-learn) (1.15.1)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Requirement already satisfied: joblib&gt;=1.2.0 in /Users/wancher/Documents/thesis/env/lib/python3.13/site-packages (from scikit-learn) (1.4.2)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /Users/wancher/Documents/thesis/env/lib/python3.13/site-packages (from scikit-learn) (3.5.0)
+</pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="font-weight: bold">[</span><span style="color: #000080; text-decoration-color: #000080; background-color: #ffffff">notice</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff; font-weight: bold">]</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> A new release of pip is available: </span><span style="color: #800000; text-decoration-color: #800000; background-color: #ffffff">24.3.1</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> -&gt; </span><span style="color: #008000; text-decoration-color: #008000; background-color: #ffffff">25.0</span>
+<span style="font-weight: bold">[</span><span style="color: #000080; text-decoration-color: #000080; background-color: #ffffff">notice</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff; font-weight: bold">]</span><span style="color: #000000; text-decoration-color: #000000; background-color: #ffffff"> To update, run: </span><span style="color: #008000; text-decoration-color: #008000; background-color: #ffffff">pip install --upgrade pip</span>
+</pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>0</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Train a model:</strong>
+<ul>
+<li><p>In the processing toolbox select dzetsaka</p></li>
+<li><p>Classification tool</p></li>
+<li><p>Train algorithm. Here are the parameters used (you can you a composite image with this tool):</p>
+<p><img src="dzetsaka_train_params.jpg" class="img-fluid"></p></li>
+</ul></li>
+<li><strong>Predictions from a trained model:</strong>
+<ul>
+<li>Once you have saved your models for each band you are ready to make predictions (I saved three models for bands 6, 5, and 4 from a Landsat 1 image)</li>
+<li>Open the processing toolbox –&gt; dzetsaka</li>
+<li>Classification tool</li>
+<li>Predict model</li>
+<li>Input raster: Landsat B4 clipped to start</li>
+<li>Model learned is my B4 model from the above step</li>
+<li>Output raster is saved in output data folder as a tif</li>
+<li>Confidence raster is saved in output data folder as a tif with a unique name</li>
+<li>RUN</li>
+<li>Change layer symbology to match your key</li>
+</ul></li>
+</ul>
+<p><img src="model_prediction_params.jpg" class="img-fluid"></p>
+<hr>
+</section>
+<section id="questions-for-parts-one-and-two" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-parts-one-and-two">Questions for parts one and two:</h3>
+<ol type="1">
+<li>What is your research question?</li>
+<li>Did the unsupervised or supervised classification perform better and what makes you say so?</li>
+<li>What is the K-Means clustering algorithm doing? Check out google or the QGIS documentation for the tool</li>
+<li>What is the K nearest neighbors algorithm doing?</li>
+<li>What kinds of biases could be introduced in the training process?</li>
+<li>How was your training data distributed spatially? Did you favor a particular area of the image?</li>
+<li>Around how many observations did you have for each class?</li>
+<li>What input raster bands did you use when predicting?</li>
+<li>Insert screenshots of the unsupervised result, and your supervised results with brief figure captions.</li>
+</ol>
+</section>
+</section>
+<section id="part-three" class="level2">
+<h2 class="anchored" data-anchor-id="part-three">Part Three</h2>
+<section id="change-detection" class="level3">
+<h3 class="anchored" data-anchor-id="change-detection">Change Detection</h3>
+<p>If you think back to lab 2; you performed change detection using R and indexed images. For example, NDVI change between 2019 to 2024.</p>
+<p>Using your additional image dates you will run the supervised classification tool again, using the same training data.</p>
+<p>You will perform post classification change detection, and this can be done a few different ways. For example we can obtain the count of pixels in each class and multiply this by pixel area to see how the surface area of a class changes over time. Or it could be framed in terms of class change (i.e., healthy forest to unhealthy forest). Just using your supervised classification maps for each image date you will toggle through them and write 2-3 sentences about the change you see visually.</p>
+<p>Now you can right-click each of your output supervised layers and select properties then histogram and compute histogram. Frequency (on the y axis is the pixel count and Pixel value is the class it belongs to). Take the frequency of the pixels in each class divided by the total to get proportion of the image that belongs to each class (this can then be multiplied by pixel area). Or you might find other ways to get pixel counts.</p>
+<p>This last part will be up to you to create additional supervised images (however many help your research question), and then create some type of summary of the pixels in each class and how this has changed over time. Feel free to use google to find ways to get pixel counts of a raster or create attribute tables for a raster. Please submit some type of visualization of the change. Whether it is a graph or a map, don’t overburden yourself but try to do a little research about how people typically do this in QGIS or excel.</p>
+</section>
+<section id="questions-for-part-three" class="level3">
+<h3 class="anchored" data-anchor-id="questions-for-part-three">Questions for part three:</h3>
+<ol type="1">
+<li>What did you learn?</li>
+<li>What are the limitations?</li>
+<li>How would you do this differently next time?</li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="k8hayes/BlogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
