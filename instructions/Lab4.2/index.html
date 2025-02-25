@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-18">
 
-<title>Lab exercises – Wesley Rancher</title>
+<title>Lab four.2 instructions – Wesley Rancher</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ca18fbd2e8790c6568535d603d3b1e7c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a1aec47332d55c002fe6faa7b7735926.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +67,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Wesley Rancher</span>
     </a>
   </div>
@@ -149,23 +90,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./code.html"> 
+    <a class="nav-link" href="../../code.html"> 
 <span class="menu-text">code</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
+    <a class="nav-link" href="../../teaching.html"> 
 <span class="menu-text">teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
+    <a class="nav-link" href="../../portfolio.html"> 
 <span class="menu-text">portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.pdf"> 
+    <a class="nav-link" href="../../cv.pdf"> 
 <span class="menu-text">cv</span></a>
   </li>  
 </ul>
@@ -176,26 +117,55 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#photogrammetry-files-located-in-r-drive-shared-folder" id="toc-photogrammetry-files-located-in-r-drive-shared-folder" class="nav-link active" data-scroll-target="#photogrammetry-files-located-in-r-drive-shared-folder">Photogrammetry! (Files located in R drive Shared folder)</a>
+  <ul class="collapse">
+  <li><a href="#steps-to-process-in-agisoft" id="toc-steps-to-process-in-agisoft" class="nav-link" data-scroll-target="#steps-to-process-in-agisoft">Steps to Process in Agisoft:</a></li>
+  <li><a href="#post-processing" id="toc-post-processing" class="nav-link" data-scroll-target="#post-processing">Post-Processing:</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="QWdpc29mdCUyME1ldGFzaGFwZQ==">Agisoft Metashape <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWFydGhFeHBsb3Jlcg==">EarthExplorer <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGlEQVI=">LiDAR <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UGhvdG9ncmFtbWV0cnk=">Photogrammetry <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UUdJUw==">QGIS <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2xhc3NpZmljYXRpb24=">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29tcG9zaXRlLWJhbmRz">composite-bands <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1hZ2UtZW5oYW5jZW1lbnQ=">image-enhancement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ay1tZWFucy1jbHVzdGVyaW5n">k-means-clustering <span class="quarto-category-count">(1)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab exercises</h1>
-<p class="subtitle lead">remote sensing lab instruction</p>
-</div>
+<h1 class="title">Lab four.2 instructions</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Agisoft Metashape</div>
+    <div class="quarto-category">Photogrammetry</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 18, 2024</p>
+    </div>
+  </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">February 25, 2025</p>
+    </div>
+  </div>
     
   </div>
   
@@ -204,202 +174,34 @@ window.Quarto = {
 </header>
 
 
-<p>We will work through various standard remote sensing techniques in these labs. However, we will be focusing on one area of interest: Mount St Helens. This will enable us to tell a story using remote sensing methods while fine tuning our skills.</p>
-<p>Labs might be updated up until their open date! Feel free to add to this collaborative Spotify <a href="https://open.spotify.com/playlist/6HDKT8XczetJ1liAdhLYXD?si=d995a7f86ac848b0&amp;pt=1de65f5671589f0fcb4f375e36924022">playlist</a> so we have some tunes while we work.</p>
+<section id="photogrammetry-files-located-in-r-drive-shared-folder" class="level1">
+<h1>Photogrammetry! (Files located in R drive Shared folder)</h1>
+<p>Recall from lecture that we can make 3D from pictures! You could do this lab at various scales. For example, you could take various photos of any subject or object of interest from many angles and perspectives and stitch them together.</p>
+<p>We will focus on the same study area as Lab 4.1, except we will be using drone images in true color, instead of LiDAR point clouds. Hence, the file type will be jpeg.</p>
+<p>You will use Agisoft to generate a model, mesh, and point cloud from your photos.</p>
+<section id="steps-to-process-in-agisoft" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-process-in-agisoft">Steps to Process in Agisoft:</h3>
+<ol type="1">
+<li><p>Search for Agisoft on your machine. Should be Windows 64-bit professional. Agisoft is not free it is recommended to use the computers in SSIL to complete this lab.</p></li>
+<li><p>Drag your photos into the software. They will be stored under a “Chunk”.</p></li>
+<li><p>Right-click the chunk with your images → <code>Process</code> → <code>Align Photos</code>.</p></li>
+<li><p>Right-click → <code>Process</code> → <code>Build Model</code>.</p></li>
+<li><p>Right-click → <code>Process</code> → <code>Build Mesh</code>.</p></li>
+<li><p>Right-click → <code>Process</code> → <code>Build Point Cloud</code>.</p></li>
+<li><p>Right-click → <code>Export</code> → <code>Export Point Cloud</code>.</p></li>
+</ol>
+</section>
+<section id="post-processing" class="level3">
+<h3 class="anchored" data-anchor-id="post-processing">Post-Processing:</h3>
+<p>Take screenshots of your model, mesh, and point clouds. What is the utility of each type of file that you rendered?</p>
+<p>It is suggested that you run your <code>.las</code> or <code>.laz</code> file that is generated from the steps above through <a href="https://wesranch.github.io/wrsite/instructions/Lab4/"><strong>Part 1</strong></a> <strong>from last week</strong> to process it further for DSM, DTM, and Hillshades. These can then be compared to the results from the NOAA LiDAR data from last week.</p>
+<p>As always, try to drag any TIFFs generated from your processing into QGIS and manipulate the symbology so you can infer more information. Sometimes it is insufficient to rely on one software for try to interpret data.</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UUdJUyUyQ2NvbXBvc2l0ZS1iYW5kcyUyQ0VhcnRoRXhwbG9yZXI=" data-listing-date-sort="1734595200000" data-listing-file-modified-sort="1739935771879" data-listing-date-modified-sort="1739935771000" data-listing-reading-time-sort="3" data-listing-word-count-sort="498">
-<div class="thumbnail">
-<p><a href="./instructions/Lab1/index.html" class="no-external"></a></p><a href="./instructions/Lab1/index.html" class="no-external">
-<p class="card-img-top"><img src="instructions/Lab1/tcc-ss.jpeg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./instructions/Lab1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./instructions/Lab1/index.html" class="no-external">Lab one instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./instructions/Lab1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UUdJUw=='); return false;">
-QGIS
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcG9zaXRlLWJhbmRz'); return false;">
-composite-bands
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RWFydGhFeHBsb3Jlcg=='); return false;">
-EarthExplorer
-</div>
-</div>
-<div class="listing-description">
-<a href="./instructions/Lab1/index.html" class="no-external">A useful tip when working with remote sensing data is to consider beginning your workflow by visualizing your data in true color. This can serve as reference prior to…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./instructions/Lab1/index.html" class="no-external">
-<div class="listing-date">
-Dec 19, 2024
-</div>
-<div class="listing-author">
-Wesley Rancher
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UUdJUyUyQ2NsYXNzaWZpY2F0aW9uJTJDay1tZWFucy1jbHVzdGVyaW5n" data-listing-date-sort="1734595200000" data-listing-file-modified-sort="1739935783950" data-listing-date-modified-sort="1739935783000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2741">
-<div class="thumbnail">
-<p><a href="./instructions/Lab3/index.html" class="no-external"></a></p><a href="./instructions/Lab3/index.html" class="no-external">
-<p class="card-img-top"><img src="instructions/Lab3/edit-SHP-ss.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./instructions/Lab3/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./instructions/Lab3/index.html" class="no-external">Lab three instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./instructions/Lab3/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UUdJUw=='); return false;">
-QGIS
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2xhc3NpZmljYXRpb24='); return false;">
-classification
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ay1tZWFucy1jbHVzdGVyaW5n'); return false;">
-k-means-clustering
-</div>
-</div>
-<div class="listing-description">
-<a href="./instructions/Lab3/index.html" class="no-external">We will use QGIS for this lab and will install the SAGA NextGen plugin and Dzetsaka.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./instructions/Lab3/index.html" class="no-external">
-<div class="listing-date">
-Dec 19, 2024
-</div>
-<div class="listing-author">
-Wesley Rancher
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="UiUyQ1FHSVMlMkNMaURBUg==" data-listing-date-sort="1708243200000" data-listing-file-modified-sort="1739936290867" data-listing-date-modified-sort="1739936290000" data-listing-reading-time-sort="10" data-listing-word-count-sort="1913">
-<div class="thumbnail">
-<p><a href="./instructions/Lab4/index.html" class="no-external"></a></p><a href="./instructions/Lab4/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./instructions/Lab4/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./instructions/Lab4/index.html" class="no-external">Lab four instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./instructions/Lab4/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UUdJUw=='); return false;">
-QGIS
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGlEQVI='); return false;">
-LiDAR
-</div>
-</div>
-<div class="listing-description">
-<a href="./instructions/Lab4/index.html" class="no-external">This lab is adapted from the Mapping with Drones class and was originally written by James Lamping and Colin Mast. Here we use a dataset from NOAA and ask slightly different…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./instructions/Lab4/index.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="QWdpc29mdCUyME1ldGFzaGFwZSUyQ1Bob3RvZ3JhbW1ldHJ5" data-listing-date-sort="1708243200000" data-listing-file-modified-sort="1740514823750" data-listing-date-modified-sort="1740514823000" data-listing-reading-time-sort="2" data-listing-word-count-sort="282">
-<div class="thumbnail">
-<p><a href="./instructions/Lab4.2/index.html" class="no-external"></a></p><a href="./instructions/Lab4.2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./instructions/Lab4.2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./instructions/Lab4.2/index.html" class="no-external">Lab four.2 instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./instructions/Lab4.2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('QWdpc29mdCUyME1ldGFzaGFwZQ=='); return false;">
-Agisoft Metashape
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UGhvdG9ncmFtbWV0cnk='); return false;">
-Photogrammetry
-</div>
-</div>
-<div class="listing-description">
-<a href="./instructions/Lab4.2/index.html" class="no-external">Recall from lecture that we can make 3D from pictures! You could do this lab at various scales. For example, you could take various photos of any subject or object of…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./instructions/Lab4.2/index.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="UiUyQ2ltYWdlLWVuaGFuY2VtZW50" data-listing-date-sort="1704441600000" data-listing-file-modified-sort="1739935778103" data-listing-date-modified-sort="1739935778000" data-listing-reading-time-sort="13" data-listing-word-count-sort="2539">
-<div class="thumbnail">
-<p><a href="./instructions/Lab2/index.html" class="no-external"></a></p><a href="./instructions/Lab2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./instructions/Lab2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./instructions/Lab2/index.html" class="no-external">Lab two instructions</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./instructions/Lab2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('aW1hZ2UtZW5oYW5jZW1lbnQ='); return false;">
-image-enhancement
-</div>
-</div>
-<div class="listing-description">
-<a href="./instructions/Lab2/index.html" class="no-external">The objective of this lab is to enhance satellite imagery using a few different techniques. This lab assumes no prior coding experience and is commented thoroughly to…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./instructions/Lab2/index.html" class="no-external">
-<div class="listing-date">
-Jan 5, 2024
-</div>
-<div class="listing-author">
-Wesley Rancher
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -816,6 +618,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://utteranc.es/client.js" repo="k8hayes/BlogComments" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 
